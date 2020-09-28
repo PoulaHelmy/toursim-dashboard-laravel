@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92ce5ba3-76e7-44ec-bcf6-5297c4fd3281" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/toursim-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/toursim-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/translatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/translatable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +185,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\resources\views\layouts\dashboard" />
       <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\app\Models" />
     </key>
   </component>
@@ -204,7 +204,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601291314246</updated>
       <workItem from="1601291315634" duration="1835000" />
-      <workItem from="1601296095955" duration="4595000" />
+      <workItem from="1601296095955" duration="8909000" />
     </task>
     <servers />
   </component>
@@ -247,5 +247,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="13" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1601298941549" />
+    <state x="284" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601304256903">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="284" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738@0.0.1366.738" timestamp="1601304256903" />
   </component>
 </project>
