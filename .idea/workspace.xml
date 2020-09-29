@@ -21,7 +21,122 @@
   <component name="ChangeListManager">
     <list default="true" id="92ce5ba3-76e7-44ec-bcf6-5297c4fd3281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/laratrust.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/laratrust.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/laratrust_seeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/laratrust_seeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/adminlte.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/adminlte.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/adminlte.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/adminlte.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/adminlte.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/adminlte.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/adminlte.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/adminlte.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/config/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/config/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/.jscsrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/AdminLTE.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/dashboard_files/js/AdminLTE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/CardRefresh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/CardWidget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/ControlSidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/DirectChat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/Dropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/Layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/PushMenu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/SiteSearch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/Toasts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/TodoList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/js/Treeview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/npm/DocsPlugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/npm/DocsPublish.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/npm/Plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/npm/Publish.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/.csslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/AdminLTE-components.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/AdminLTE-core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/AdminLTE-extra-components.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/AdminLTE-pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/AdminLTE-plugins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/AdminLTE-raw.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/AdminLTE.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_alerts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_bootstrap-variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_brand.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_callout.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_cards.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_control-sidebar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_direct-chat.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_elevation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_info-box.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_layout.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_main-header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_main-sidebar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_miscellaneous.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_modals.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_navs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_print.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_products.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_progress-bars.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_sidebar-mini.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_small-box.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_social-widgets.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_table.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_timeline.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_toasts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_users-list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_accent.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_backgrounds.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_cards.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_direct-chat.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_miscellaneous.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_sidebar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/mixins/_toasts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/pages/_404_500_errors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/pages/_e-commerce.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/pages/_invoice.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/pages/_lockscreen.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/pages/_login_and_register.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/pages/_mailbox.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/pages/_profile.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/pages/_projects.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/parts/_components.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/parts/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/parts/_extra-components.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/parts/_miscellaneous.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/parts/_pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/parts/_plugins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_bootstrap-slider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_bootstrap-switch.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_fullcalendar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_icheck-bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_jqvmap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_mapael.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_miscellaneous.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_pace.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_select2.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_sweetalert2.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard_files/scss/plugins/_toastr.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,12 +293,19 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.saveactions" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\resources\views\dashboard" />
+      <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\public\dashboard_files\css" />
+      <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\public\dashboard_files" />
+      <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\resources\lang" />
+      <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\database\seeds" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\resources\views\layouts\dashboard" />
       <recent name="C:\xampp\htdocs\LARAVEL\toursim-system\app\Models" />
@@ -204,7 +326,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601291314246</updated>
       <workItem from="1601291315634" duration="1835000" />
-      <workItem from="1601296095955" duration="8909000" />
+      <workItem from="1601296095955" duration="8976000" />
+      <workItem from="1601363916423" duration="8489000" />
     </task>
     <servers />
   </component>
@@ -221,6 +344,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="484" y="138" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601299707732">
@@ -243,6 +367,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="557" y="292" key="Create Model/0.0.1366.738@0.0.1366.738" timestamp="1601298201978" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1601364740560">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1601364740560" />
     <state x="184" y="13" key="SettingsEditor" timestamp="1601298941549">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

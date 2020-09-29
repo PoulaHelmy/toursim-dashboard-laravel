@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}" lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/jqvmap/jqvmap.min.css') }}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('dashboard_files/adminlte.min.css') }}">
+
     <!-- overlayScrollbars -->
     <link rel="stylesheet"
           href="{{ asset('dashboard_files/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
@@ -29,58 +28,41 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     {{--    {{ asset('dashboard_files/css/bootstrap.min.css') }}       --}}
+
+    @if (app()->getLocale() == 'ar')
+        {{--        <link rel="stylesheet" href="{{ asset('dashboard_files/css/font-awesome-rtl.min.css') }}">--}}
+        {{--        <link rel="stylesheet" href="{{ asset('dashboard_files/css/AdminLTE-rtl.min.css') }}">--}}
+        <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+        {{--        <link rel="stylesheet" href="{{ asset('dashboard_files/css/bootstrap-rtl.min.css') }}">--}}
+        {{--        <link rel="stylesheet" href="{{ asset('dashboard_files/css/rtl.css') }}">--}}
+    <!-- Theme style -->
+        <link rel="stylesheet" href="{{ asset('dashboard_files/css/rtl/adminlte.min.css') }}">
+        <!-- Bootstrap 4 RTL -->
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+        <!-- Custom style for RTL -->
+        <link rel="stylesheet" href="{{ asset('dashboard_files/css/custom.css') }}">
+
+        <style>
+            body, h1, h2, h3, h4, h5, h6 {
+                font-family: 'Cairo', sans-serif !important;
+            }
+        </style>
+    @else
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{{ asset('dashboard_files/css/adminlte.css') }}">
+    @endif
+
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-    <!----  MAIN NAv BAR  ---->
-@include('layouts.dashboard.navbar')
-<!----  END MAIN NAv BAR  ---->
-
-    <!----  MAIN SIDE BAR  ---->
-@include('layouts.dashboard._aside')
-<!----  END OF AIN SIDE BAR  ---->
-    <!----  MAIN CONTENT  ---->
-@yield('content')
-<!----  END OF MAIN CONTENT  ---->
-    <!----  MAIN PARTIAL ERROR & TOASTERS  ---->
-@include('partials._session')
-<!----  END MAIN PARTIAL ERROR & TOASTERS  ---->
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Dashboard</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v1</li>
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
-
-        <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-
-            </div><!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-@include('layouts.dashboard.footer')
-<!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+    @include('layouts.dashboard.navbar')
+    @include('layouts.dashboard._aside')
+    @yield('content')
+    @include('partials._session')
+    @include('layouts.dashboard.footer')
 </div>
 <!-- ./wrapper -->
 
@@ -115,6 +97,92 @@
 <script
     src="{{ asset('dashboard_files/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('dashboard_files/adminlte.min.js') }}"></script>
+<script src="{{ asset('dashboard_files/js/adminlte.js') }}"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.sidebar-menu').tree();
+
+        //icheck
+        $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+            checkboxClass: 'icheckbox_minimal-blue',
+            radioClass: 'iradio_minimal-blue'
+        });
+
+        //delete
+        $('.delete').click(function (e) {
+
+            var that = $(this)
+
+            e.preventDefault();
+
+            var n = new Noty({
+                text: "@lang('site.confirm_delete')",
+                type: "warning",
+                killer: true,
+                buttons: [
+                    Noty.button("@lang('site.yes')", 'btn btn-success mr-2', function () {
+                        that.closest('form').submit();
+                    }),
+
+                    Noty.button("@lang('site.no')", 'btn btn-primary mr-2', function () {
+                        n.close();
+                    })
+                ]
+            });
+
+            n.show();
+
+        });//end of delete
+
+        // // image preview
+        // $(".image").change(function () {
+        //
+        //     if (this.files && this.files[0]) {
+        //         var reader = new FileReader();
+        //
+        //         reader.onload = function (e) {
+        //             $('.image-preview').attr('src', e.target.result);
+        //         }
+        //
+        //         reader.readAsDataURL(this.files[0]);
+        //     }
+        //
+        // });
+
+        CKEDITOR.config.language = "{{ app()->getLocale() }}";
+
+    });//end of ready
+
+
+</script>
+@stack('scripts')
 </body>
 </html>
+{{--    <div class="content-wrapper">--}}
+{{--        <!-- Content Header (Page header) -->--}}
+{{--        <div class="content-header">--}}
+{{--            <div class="container-fluid">--}}
+{{--                <div class="row mb-2">--}}
+{{--                    <div class="col-sm-6">--}}
+{{--                        <h1 class="m-0 text-dark">Dashboard</h1>--}}
+{{--                    </div><!-- /.col -->--}}
+{{--                    <div class="col-sm-6">--}}
+{{--                        <ol class="breadcrumb float-sm-right">--}}
+{{--                            <li class="breadcrumb-item"><a href="#">Home</a></li>--}}
+{{--                            --}}{{--                            <li class="breadcrumb-item active">Dashboard v1</li>--}}
+{{--                        </ol>--}}
+{{--                    </div><!-- /.col -->--}}
+{{--                </div><!-- /.row -->--}}
+{{--            </div><!-- /.container-fluid -->--}}
+{{--        </div>--}}
+{{--        <!-- /.content-header -->--}}
+
+{{--        <!-- Main content -->--}}
+{{--        <section class="content">--}}
+{{--            <div class="container-fluid">--}}
+
+{{--            </div><!-- /.container-fluid -->--}}
+{{--        </section>--}}
+{{--        <!-- /.content -->--}}
+{{--    </div>--}}
