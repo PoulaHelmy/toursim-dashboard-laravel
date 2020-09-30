@@ -17,8 +17,12 @@
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/jqvmap/jqvmap.min.css') }}">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
 
     <!-- overlayScrollbars -->
+
     <link rel="stylesheet"
           href="{{ asset('dashboard_files/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Daterange picker -->
@@ -99,6 +103,8 @@
 <script src="{{ asset('dashboard_files/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <script src="{{ asset('dashboard_files/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
 <script src="{{ asset('dashboard_files/plugins/toastr/toastr.min.js') }}"></script>
+<script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+
 <!-- overlayScrollbars -->
 <script
     src="{{ asset('dashboard_files/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>

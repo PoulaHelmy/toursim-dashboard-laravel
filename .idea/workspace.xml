@@ -21,26 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92ce5ba3-76e7-44ec-bcf6-5297c4fd3281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DestinationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DestinationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HotelsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HotelsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SeosTranslationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/CategoryTranslation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CategoryTranslation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Destination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Destination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Seo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Seo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/SeoTranslation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SeoTranslation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_130723_create_seo_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_130723_create_seo_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_132042_create_seos_translations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_132042_create_seo_translations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_132935_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_132935_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_132947_create_categories_translation_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_132947_create_category_translations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/_error.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/_error.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/_session.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/_session.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +214,7 @@
       <workItem from="1601291315634" duration="1835000" />
       <workItem from="1601296095955" duration="8976000" />
       <workItem from="1601363916423" duration="26626000" />
-      <workItem from="1601450627595" duration="16108000" />
+      <workItem from="1601450627595" duration="17687000" />
     </task>
     <servers />
   </component>
