@@ -8,6 +8,6 @@ class SeoTranslation extends Model
 {
     public $timestamps = false;
     protected $fillable = ['page_title', 'meta_keywords', 'meta_description', 'og_title', 'og_description', 'og_image'];
-
+    protected $table = 'seo_translations';
 }//END OF CLASS
 

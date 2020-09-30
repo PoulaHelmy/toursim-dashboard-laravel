@@ -9,7 +9,7 @@ class CreateSeoTable extends Migration
     public function up()
     {
         Schema::create('seos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->morphs('seoable');
             $table->timestamps();
         });

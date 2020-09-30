@@ -54,13 +54,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('destinations.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
                                     <p>ALL Destinations</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('destinations.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
                                     <p>Add New Destination</p>
                                 </a>
@@ -79,13 +79,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('categories.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
                                     <p>ALL Categories</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('categories.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
                                     <p>Add New Categories</p>
                                 </a>
@@ -104,13 +104,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('packages.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
                                     <p>ALL Packages</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('packages.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
                                     <p>Add New Packages</p>
                                 </a>
@@ -129,13 +129,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('excursions.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
                                     <p>ALL Excursions</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('excursions.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
                                     <p>Add New Excursions</p>
                                 </a>
@@ -154,13 +154,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('hotels.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
                                     <p>ALL Hotels</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('hotels.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
                                     <p>Add New Hotels</p>
                                 </a>
@@ -168,8 +168,6 @@
                         </ul>
                     </li>
                 @endif
-
-
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -15,11 +15,16 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
     Route::get('/', function () {
         return view('dashboard.welcome');
-    });
+    })->name('welcome');
     Auth::routes();
     Route::get('/home', 'HomeController@index')->name('home');
     //product routes
-//    Route::resource('articles', 'ArticlesController');
+    Route::resource('hotels', 'HotelsController');
+    Route::resource('excursions', 'ExcursionsController');
+    Route::resource('categories', 'CategoriesController');
+    Route::resource('seos', 'SeosController');
+    Route::resource('destinations', 'DestinationsController');
+    Route::resource('packages', 'PackagesController');
 //    /*-------------------------------------------------------------------------------------*/
 //    Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(function () {
 //        //Welcome Route

@@ -81,6 +81,12 @@ return [
         'title' => 'عنوان الموضوع باللغه العربيه',
         'content' => 'المحتوي باللغه العربيه',
         'notes' => 'ملاحظات باللغه العربيه',
+        'slug' => 'الاسم المستعار',
+        'page_title' => 'عنوان الصفحة',
+        'meta_description' => 'meta_description',
+        'meta_keywords' => 'meta_description',
+        'og_description' => 'og_description',
+        'og_image' => 'og:image'
 
     ],
 
@@ -91,9 +97,40 @@ return [
         'title' => 'عنوان الموضوع باللغه الانجليزيه',
         'content' => 'المحتوي باللغه الانجليزيه',
         'notes' => 'ملاحظات باللغه الانجليزيه',
+        'slug' => 'الاسم المستعار', 'ogtitle' => 'العنوان:og',
+        'page_title' => 'عنوان الصفحة',
+        'meta_description' => 'meta_description',
+        'meta_keywords' => 'meta_description',
+        'og_description' => 'og_description',
+        'og_image' => 'og:image'
 
 
     ],
+    'nameplaceholder' => 'ادخل الايميل',
+    'sitelinkplaceholder' => 'ادخل عنوان الموقع الالكترونى',
+    'emailplaceholder' => 'ادخل عنوان البريد الالكترونى',
+    'starsplaceholder' => 'اختر عدد النجوم',
+    'hotels' => 'الفنادق',
+    'addhotel' => 'إضافة فنددق جديد',
+    'hotelplaceholder' => 'ادخل اسم الفندق',
+    'hotelstars' => 'عدد نجوم الفندق',
+    'sitelink' => 'عنوان الفندق على الانترنت',
+    'star' => 'نجمة',
+    'stars' => 'نجوم',
+    'category' => 'الفئة',
+    'destinations' => 'الاماكن',
+    'slug' => 'الاسم المستعار',
+    'categories' => 'الفئات',
+    'page_title' => 'عنوان الصفحة',
+    'meta_description' => 'meta_description',
+    'meta_keywords' => 'meta_description',
+    'og_description' => 'og_description',
+    'og_image' => 'og:image',
+    'parentcategories' => 'الفئة الرئيسية',
 
+
+    'adddestination' => 'إضافة واجهة جديدة',
+    'addcategory' => 'إضافة فئة جديدة',
+    'editcategory' => 'تعديل فئة جديدة',
 
 ];

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryTranslation extends Model
 {
     public $timestamps = false;
-    protected $table = 'categories_translation';
+    protected $table = 'category_translations';
     protected $fillable = ['name', 'slug', 'description'];
 
 }//END OF CLASS

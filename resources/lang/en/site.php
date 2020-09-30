@@ -74,6 +74,14 @@ return [
         'title' => 'Arabic Title',
         'content' => 'ُArabic Comtent',
         'notes' => 'Notes Arabic',
+        'slug' => 'Slug',
+        'page_title' => 'Page Title',
+        'og_title' => 'og:title',
+        'meta_description' => 'meta_description',
+        'meta_keywords' => 'meta_keywords',
+        'og_description' => 'og_description',
+        'og_image' => 'og:image'
+
 
     ],
 
@@ -84,9 +92,46 @@ return [
         'title' => 'English Title',
         'content' => 'English Comtent',
         'notes' => 'Notes English',
-
+        'slug' => 'Slug',
+        'page_title' => 'Page Title',
+        'og_title' => 'og:title',
+        'meta_description' => 'meta_description',
+        'meta_keywords' => 'meta_keywords',
+        'og_description' => 'og_description',
+        'og_image' => 'og:image'
 
     ],
+
+
+    'nameplaceholder' => 'Enter Name',
+    'sitelinkplaceholder' => 'Enter Website Link',
+    'emailplaceholder' => 'Enter Email Address',
+    'starsplaceholder' => 'Select Number Of Start',
+
+
+    'hotels' => 'Hotels',
+    'addhotel' => 'Add New Hotel',
+    'hotelplaceholder' => 'Enter Hotel Name',
+    'hotelstars' => 'Hotel Stars',
+    'sitelink' => 'Hotel Site Link',
+    'star' => 'Star',
+    'stars' => 'Stars',
+
+    'category' => 'Category',
+    'categories' => 'Categories',
+    'destinations' => 'Destinations',
+    'slug' => 'Slug',
+    'page_title' => 'Page Title',
+    'og_title' => 'og:title',
+    'meta_description' => 'meta_description',
+    'meta_keywords' => 'meta_keywords',
+    'og_description' => 'og_description',
+    'og_image' => 'og:image',
+    'parentcategories' => 'Parent Categories',
+
+    'adddestination' => 'Add New Destination',
+    'addcategory' => 'Add New Category',
+    'editcategory' => 'Edit New Category',
 
 
 ];
