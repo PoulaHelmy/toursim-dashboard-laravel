@@ -80,9 +80,16 @@ return [
         'meta_description' => 'meta_description',
         'meta_keywords' => 'meta_keywords',
         'og_description' => 'og_description',
-        'og_image' => 'og:image'
+        'og_image' => 'og:image',
 
-
+        'run' => 'Run',
+        'type' => 'Type',
+        'short_description' => 'الوصف المختصر',
+        'overview' => 'الوصف العام',
+        'includes' => 'Including',
+        'excludes' => 'Excluding',
+        'categories' => 'الفثات',
+        'destinations' => 'اماكن الوصول',
     ],
 
     'en' => [
@@ -98,7 +105,16 @@ return [
         'meta_description' => 'meta_description',
         'meta_keywords' => 'meta_keywords',
         'og_description' => 'og_description',
-        'og_image' => 'og:image'
+        'og_image' => 'og:image',
+
+        'run' => 'Run',
+        'type' => 'Type',
+        'short_description' => 'Short Description',
+        'overview' => 'Overview',
+        'includes' => 'Including',
+        'excludes' => 'Excluding',
+        'categories' => 'Categories',
+        'destinations' => 'Destinations'
 
     ],
 
@@ -131,7 +147,18 @@ return [
 
     'adddestination' => 'Add New Destination',
     'addcategory' => 'Add New Category',
+    'excursions' => 'Excursions',
+    'addexcursions' => 'Add New Excursion',
+    'editexcursions' => 'Edit Excursion',
     'editcategory' => 'Edit New Category',
 
+
+    'run' => 'Run',
+    'type' => 'Type',
+    'featured' => 'Featured',
+
+    'start' => 'Start',
+    'duration' => 'Duration',
+    'discount' => 'Discount',
 
 ];

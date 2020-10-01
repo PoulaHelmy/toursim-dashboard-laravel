@@ -37,6 +37,12 @@
           href="{{ asset('dashboard_files/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
     <link rel="stylesheet"
           href="{{ asset('dashboard_files/plugins/toastr/toastr.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('dashboard_files/plugins/select2/css/select2.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('dashboard_files/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('dashboard_files/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     {{--    {{ asset('dashboard_files/css/bootstrap.min.css') }}       --}}
@@ -108,6 +114,10 @@
 <script src="{{ asset('dashboard_files/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <script src="{{ asset('dashboard_files/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
 <script src="{{ asset('dashboard_files/plugins/bootstrap-tags/tagsinput.js') }}"></script>
+<script src="{{ asset('dashboard_files/plugins/select2/js/select2.min.js') }}"></script>
+<script
+    src="{{ asset('dashboard_files/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js') }}"></script>
+<script src="{{ asset('dashboard_files/plugins/bootstrap-tags/tagsinput.js') }}"></script>
 {{--<script src="{{ asset('dashboard_files/plugins/bootstrap-tags/bootstrap-tagsinput-angular.min.js') }}"></script>--}}
 <script src="{{ asset('dashboard_files/plugins/toastr/toastr.min.js') }}"></script>
 <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
@@ -118,6 +128,10 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('dashboard_files/js/adminlte.js') }}"></script>
 <script type="text/javascript">
+    $('.summernote').summernote({
+        tabsize: 2,
+        height: 100
+    });
     // image preview
     $(".dest_banner_image").change(function () {
 
@@ -165,6 +179,32 @@
 
             reader.onload = function (e) {
                 $('.cat_thumb_image_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(this.files[0]);
+        }
+
+    });
+    $(".ex_banner_image").change(function () {
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.ex_banner_image_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(this.files[0]);
+        }
+
+    });
+    $(".ex_thumb_image").change(function () {
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.ex_thumb_image_preview').attr('src', e.target.result);
             }
 
             reader.readAsDataURL(this.files[0]);

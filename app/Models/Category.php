@@ -18,20 +18,32 @@ class Category extends Model implements TranslatableContract
     public function seoAttributes()
     {
         return $this->morphOne('App\Models\Seo', 'seoable');
-    }
+    }//End OF seoAttributes
 
     public function photos()
     {
         return $this->morphOne('App\Models\Photo', 'photoable');
-    }
+    }//End OF photos
 
     public function parent()
     {
         return $this->hasMany(self::class, 'parent_id');
-    }
+    }//End OF parent
+
+    public function excursions()
+    {
+        return $this->morphedByMany('App\Models\Excursion', 'categoriable');
+    }//End OF excursions
+
+    public function packages()
+    {
+        return $this->morphedByMany('App\Models\Excursion', 'categoriable');
+    }//End OF packages
+
+
+}//End OF CLass
+
 //    public function parent()
 //    {
 //        return $this->hasMany(self::class, 'parent_id');
 //    }
-
-}//End OF CLass

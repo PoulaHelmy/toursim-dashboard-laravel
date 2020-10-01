@@ -15,6 +15,9 @@ class CreateRelatedBookingTable extends Migration
     {
         Schema::create('related_booking', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('excursion_id');
+            $table->foreign('excursion_id')->references('id')->on('excursions')->onDelete('cascade');
+
             $table->morphs('relatable');
             $table->timestamps();
         });

@@ -18,10 +18,15 @@ class Destination extends Model implements TranslatableContract
     public function seoAttributes()
     {
         return $this->morphOne('App\Models\Seo', 'seoable');
-    }
+    }//End OF seoAttributes
 
     public function photos()
     {
         return $this->morphOne('App\Models\Photo', 'photoable');
-    }
+    }//End OF photos
+
+    public function excursions()
+    {
+        return $this->hasMany('App\Models\Excursion');
+    }//End OF excursions
 }//End OF CLass

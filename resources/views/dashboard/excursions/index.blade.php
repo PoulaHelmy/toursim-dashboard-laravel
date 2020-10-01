@@ -5,13 +5,13 @@
     <div class="content-wrapper">
         <!-- BREADCRUMBS -->
         <section class="content-header">
-            <h1>@lang('site.categories')</h1>
+            <h1>@lang('site.excursions')</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="{{ route('welcome') }}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')
                     </a>
                 </li>
-                <li class="breadcrumb-item"><a href="{{ route('categories.index') }}"> @lang('site.categories')</a>
+                <li class="breadcrumb-item"><a href="{{ route('excursions.index') }}"> @lang('site.excursions')</a>
                 </li>
             </ol>
         </section>
@@ -24,10 +24,10 @@
                             <div class="card-header">
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-12 col-md-4">
-                                        <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">@lang('site.categories')</h3>
+                                        <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">@lang('site.excursions')</h3>
                                     </div>
                                     <div class="col-12 col-md-8">
-                                        <form action="{{ route('categories.index') }}" method="get">
+                                        <form action="{{ route('excursions.index') }}" method="get">
                                             <div class="row justify-content-end align-items-center">
                                                 <div class="col-md-4">
                                                     <input type="text" name="search" class="form-control"
@@ -37,7 +37,7 @@
                                                 <div class="col-md-4">
                                                     <button type="submit" class="btn btn-primary"><i
                                                             class="fa fa-search"></i> @lang('site.search')</button>
-                                                    @if (auth()->user()->hasPermission('create_categories'))
+                                                    @if (auth()->user()->hasPermission('create_excursions'))
                                                         <a href="{{ route('categories.create') }}"
                                                            class="btn btn-primary"><i
                                                                 class="fa fa-plus"></i> @lang('site.add')</a>
@@ -61,7 +61,7 @@
                                         <th>#</th>
                                         <th>@lang('site.name')</th>
                                         <th>@lang('site.slug')</th>
-                                        @if (auth()->user()->hasPermission('update_categories','delete_categories'))
+                                        @if (auth()->user()->hasPermission('update_excursions','delete_excursions'))
                                             <th>@lang('site.action')</th>
                                         @endif
                                     </tr>
@@ -76,11 +76,11 @@
                                                 {{$row->slug}}
                                             </td>
                                             <td>
-                                                {{--                                                @if (auth()->user()->hasPermission('read_categories'))--}}
+                                                {{--                                                @if (auth()->user()->hasPermission('read_excursions'))--}}
                                                 {{--                                                    <a href="{{ route('categories.show',  $row->id) }}"--}}
                                                 {{--                                                       class="btn btn-info btn-sm">@lang('site.show')</a>--}}
                                                 {{--                                                @endif--}}
-                                                @if (auth()->user()->hasPermission('update_categories'))
+                                                @if (auth()->user()->hasPermission('update_excursions'))
                                                     <a href="{{ route('categories.edit', $row->id) }}"
                                                        class="btn btn-info btn-sm"><i
                                                             class="fa fa-edit"></i> @lang('site.edit')
@@ -89,7 +89,7 @@
                                                     <a href="#" class="btn btn-info btn-sm disabled"><i
                                                             class="fa fa-edit"></i> @lang('site.edit')</a>
                                                 @endif
-                                                @if (auth()->user()->hasPermission('delete_categories'))
+                                                @if (auth()->user()->hasPermission('delete_excursions'))
                                                     <form action="{{ route('categories.destroy', $row->id) }}"
                                                           method="post"
                                                           style="display: inline-block">

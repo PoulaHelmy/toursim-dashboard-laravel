@@ -86,8 +86,16 @@ return [
         'meta_description' => 'meta_description',
         'meta_keywords' => 'meta_description',
         'og_description' => 'og_description',
-        'og_image' => 'og:image'
+        'og_image' => 'og:image',
 
+        'run' => 'Run',
+        'type' => 'النوع',
+        'short_description' => 'الوصف المختصر',
+        'overview' => 'الوصف العام',
+        'includes' => 'Including',
+        'excludes' => 'Excluding',
+        'categories' => 'الفثات',
+        'destinations' => 'اماكن الوصول',
     ],
 
     'en' => [
@@ -102,9 +110,16 @@ return [
         'meta_description' => 'meta_description',
         'meta_keywords' => 'meta_description',
         'og_description' => 'og_description',
-        'og_image' => 'og:image'
+        'og_image' => 'og:image',
 
-
+        'run' => 'Run',
+        'type' => 'النوع',
+        'short_description' => 'Short Description',
+        'overview' => 'Overview',
+        'includes' => 'Including',
+        'excludes' => 'Excluding',
+        'categories' => 'Categories',
+        'destinations' => 'Destinations'
     ],
     'nameplaceholder' => 'ادخل الايميل',
     'sitelinkplaceholder' => 'ادخل عنوان الموقع الالكترونى',
@@ -131,6 +146,18 @@ return [
 
     'adddestination' => 'إضافة واجهة جديدة',
     'addcategory' => 'إضافة فئة جديدة',
+    'excursions' => 'رحلات اليوم الواحد ',
+    'addexcursions' => 'إضافة رحلة جديدة',
+    'editexcursions' => 'تعديل رحلة',
+
     'editcategory' => 'تعديل فئة جديدة',
+
+
+    'run' => 'Run',
+    'type' => 'النوع',
+    'featured' => 'مميز',
+    'start' => 'Start',
+    'duration' => 'Duration',
+    'discount' => 'Discount',
 
 ];
