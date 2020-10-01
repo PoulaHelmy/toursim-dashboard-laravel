@@ -28,8 +28,13 @@ class Store extends FormRequest
             $rules += [$locale . '.name' => 'required|string|unique:destination_translation,name'];
             $rules += [$locale . '.slug' => 'required|string|unique:destination_translation,slug'];
             $rules += [$locale . '.description' => 'required|string|max:150'];
+            $rules += [$locale . '.page_title' => 'string|max:150'];
+            $rules += [$locale . '.meta_keywords' => 'string'];
+            $rules += [$locale . '.meta_description' => 'string'];
+            $rules += [$locale . '.og_title' => 'string'];
+            $rules += [$locale . '.og_description' => 'string'];
+            $rules += [$locale . '.og_image' => 'required|image:mimes,jpeg,png,gif'];
         }//end of  for each
-
         return $rules;
     }
 }

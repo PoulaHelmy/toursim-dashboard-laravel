@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/jqvmap/jqvmap.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/bootstrap-tags/tagsinput.css') }}">
+
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
@@ -54,6 +58,8 @@
             body, h1, h2, h3, h4, h5, h6 {
                 font-family: 'Cairo', sans-serif !important;
             }
+
+
         </style>
     @else
         <link rel="stylesheet"
@@ -61,7 +67,6 @@
         <!-- Theme style -->
         <link rel="stylesheet" href="{{ asset('dashboard_files/css/adminlte.css') }}">
     @endif
-
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -102,6 +107,8 @@
 <!-- Summernote -->
 <script src="{{ asset('dashboard_files/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <script src="{{ asset('dashboard_files/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
+<script src="{{ asset('dashboard_files/plugins/bootstrap-tags/tagsinput.js') }}"></script>
+{{--<script src="{{ asset('dashboard_files/plugins/bootstrap-tags/bootstrap-tagsinput-angular.min.js') }}"></script>--}}
 <script src="{{ asset('dashboard_files/plugins/toastr/toastr.min.js') }}"></script>
 <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
@@ -111,6 +118,59 @@
 <!-- AdminLTE App -->
 <script src="{{ asset('dashboard_files/js/adminlte.js') }}"></script>
 <script type="text/javascript">
+    // image preview
+    $(".dest_banner_image").change(function () {
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.dest_banner_image_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(this.files[0]);
+        }
+
+    });
+    $(".dest_thumb_image").change(function () {
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.dest_thumb_image_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(this.files[0]);
+        }
+
+    });
+    $(".cat_banner_image").change(function () {
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.cat_banner_image_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(this.files[0]);
+        }
+
+    });
+    $(".cat_thumb_image").change(function () {
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.cat_thumb_image_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(this.files[0]);
+        }
+
+    });
     $(function () {
         const Toast = Swal.mixin({
             toast: true,
@@ -298,30 +358,3 @@
 @stack('scripts')
 </body>
 </html>
-{{--    <div class="content-wrapper">--}}
-{{--        <!-- Content Header (Page header) -->--}}
-{{--        <div class="content-header">--}}
-{{--            <div class="container-fluid">--}}
-{{--                <div class="row mb-2">--}}
-{{--                    <div class="col-sm-6">--}}
-{{--                        <h1 class="m-0 text-dark">Dashboard</h1>--}}
-{{--                    </div><!-- /.col -->--}}
-{{--                    <div class="col-sm-6">--}}
-{{--                        <ol class="breadcrumb float-sm-right">--}}
-{{--                            <li class="breadcrumb-item"><a href="#">Home</a></li>--}}
-{{--                            --}}{{--                            <li class="breadcrumb-item active">Dashboard v1</li>--}}
-{{--                        </ol>--}}
-{{--                    </div><!-- /.col -->--}}
-{{--                </div><!-- /.row -->--}}
-{{--            </div><!-- /.container-fluid -->--}}
-{{--        </div>--}}
-{{--        <!-- /.content-header -->--}}
-
-{{--        <!-- Main content -->--}}
-{{--        <section class="content">--}}
-{{--            <div class="container-fluid">--}}
-
-{{--            </div><!-- /.container-fluid -->--}}
-{{--        </section>--}}
-{{--        <!-- /.content -->--}}
-{{--    </div>--}}

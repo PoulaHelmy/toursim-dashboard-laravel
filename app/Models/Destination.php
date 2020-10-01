@@ -19,4 +19,9 @@ class Destination extends Model implements TranslatableContract
     {
         return $this->morphOne('App\Models\Seo', 'seoable');
     }
+
+    public function photos()
+    {
+        return $this->morphOne('App\Models\Photo', 'photoable');
+    }
 }//End OF CLass

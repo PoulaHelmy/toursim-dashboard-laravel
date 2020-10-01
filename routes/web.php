@@ -17,6 +17,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         return view('dashboard.welcome');
     })->name('welcome');
     Auth::routes();
+    Route::view('/test', 'dashboard.categories.show');
     Route::get('/home', 'HomeController@index')->name('home');
     //product routes
     Route::resource('hotels', 'HotelsController');
