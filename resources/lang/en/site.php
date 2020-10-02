@@ -81,6 +81,7 @@ return [
         'meta_keywords' => 'meta_keywords',
         'og_description' => 'og_description',
         'og_image' => 'og:image',
+        'places' => 'الاماكن',
 
         'run' => 'Run',
         'type' => 'Type',
@@ -90,6 +91,10 @@ return [
         'excludes' => 'Excluding',
         'categories' => 'الفثات',
         'destinations' => 'اماكن الوصول',
+        'day_title' => 'Day Title',
+        'day_summery' => 'Day Summery',
+        'season_start' => 'Season Start',
+        'season_end' => 'Season End',
     ],
 
     'en' => [
@@ -114,8 +119,12 @@ return [
         'includes' => 'Including',
         'excludes' => 'Excluding',
         'categories' => 'Categories',
-        'destinations' => 'Destinations'
-
+        'destinations' => 'Destinations',
+        'places' => 'Places',
+        'day_title' => 'Day Title',
+        'day_summery' => 'Day Summery',
+        'season_start' => 'Season Start',
+        'season_end' => 'Season End',
     ],
 
 
@@ -132,6 +141,7 @@ return [
     'sitelink' => 'Hotel Site Link',
     'star' => 'Star',
     'stars' => 'Stars',
+    'freqpackages' => 'Frequently Booked Together',
 
     'category' => 'Category',
     'categories' => 'Categories',
@@ -160,5 +170,15 @@ return [
     'start' => 'Start',
     'duration' => 'Duration',
     'discount' => 'Discount',
-
+    'places' => 'Places',
+    'plans' => 'Plans',
+    'addplans' => 'Add NEW Plans',
+    'editplans' => 'Edit Plans',
+    'packages' => 'Packages',
+    'addpackages' => 'Add NEW Package',
+    'editpackages' => 'Edit Package',
+    'day_title' => 'Day Title',
+    'day_summery' => 'Day Summery',
+    'season_start' => 'Season Start',
+    'season_end' => 'Season End',
 ];

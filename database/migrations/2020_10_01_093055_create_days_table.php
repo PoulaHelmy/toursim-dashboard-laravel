@@ -15,10 +15,10 @@ class CreateDaysTable extends Migration
     {
         Schema::create('days', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('summery');
+
             $table->unsignedBigInteger('package_id');
             $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade');
+
 
             $table->timestamps();
         });

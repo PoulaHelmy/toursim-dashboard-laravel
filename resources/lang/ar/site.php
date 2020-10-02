@@ -87,6 +87,7 @@ return [
         'meta_keywords' => 'meta_description',
         'og_description' => 'og_description',
         'og_image' => 'og:image',
+        'places' => 'الاماكن',
 
         'run' => 'Run',
         'type' => 'النوع',
@@ -96,6 +97,10 @@ return [
         'excludes' => 'Excluding',
         'categories' => 'الفثات',
         'destinations' => 'اماكن الوصول',
+        'day_title' => 'Day Title',
+        'day_summery' => 'Day Summery',
+        'season_start' => 'Season Start',
+        'season_end' => 'Season End',
     ],
 
     'en' => [
@@ -111,6 +116,7 @@ return [
         'meta_keywords' => 'meta_description',
         'og_description' => 'og_description',
         'og_image' => 'og:image',
+        'places' => 'Places',
 
         'run' => 'Run',
         'type' => 'النوع',
@@ -119,7 +125,11 @@ return [
         'includes' => 'Including',
         'excludes' => 'Excluding',
         'categories' => 'Categories',
-        'destinations' => 'Destinations'
+        'destinations' => 'Destinations',
+        'day_title' => 'Day Title',
+        'day_summery' => 'Day Summery',
+        'season_start' => 'Season Start',
+        'season_end' => 'Season End',
     ],
     'nameplaceholder' => 'ادخل الايميل',
     'sitelinkplaceholder' => 'ادخل عنوان الموقع الالكترونى',
@@ -142,6 +152,7 @@ return [
     'og_description' => 'og_description',
     'og_image' => 'og:image',
     'parentcategories' => 'الفئة الرئيسية',
+    'places' => 'Places',
 
 
     'adddestination' => 'إضافة واجهة جديدة',
@@ -159,5 +170,16 @@ return [
     'start' => 'Start',
     'duration' => 'Duration',
     'discount' => 'Discount',
+    'plans' => 'خطط الاسعار',
+    'addplans' => 'إضافة خطة اسعار جديدة',
+    'editplans' => 'تعديل خطة اسعار',
+    'packages' => 'الرحلات',
+    'addpackages' => 'إضافة رحلة جديدة',
+    'editpackages' => 'تعديل رحلة',
+    'freqpackages' => 'Frequently Booked Together',
+    'day_title' => 'Day Title',
+    'day_summery' => 'Day Summery',
+    'season_start' => 'Season Start',
+    'season_end' => 'Season End',
 
 ];

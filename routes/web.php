@@ -26,6 +26,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::resource('seos', 'SeosController');
     Route::resource('destinations', 'DestinationsController');
     Route::resource('packages', 'PackagesController');
+    Route::resource('plans', 'PlansController');
 //    /*-------------------------------------------------------------------------------------*/
 //    Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(function () {
 //        //Welcome Route

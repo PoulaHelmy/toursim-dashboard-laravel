@@ -469,7 +469,7 @@
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">@lang('site.add')</button>
+                            <button type="submit" class="btn btn-primary">@lang('site.edit')</button>
                         </div>
                         </form>
                     </div>

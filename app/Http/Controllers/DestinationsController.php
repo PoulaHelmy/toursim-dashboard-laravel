@@ -37,7 +37,7 @@ class DestinationsController extends Controller
 
     public function store(Store $request)
     {
-        dd($request->all());
+//        dd($request->all());
         $request_array = $request->all();
         $destination = Destination::create($request->all());
 

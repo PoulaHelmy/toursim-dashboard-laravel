@@ -22,6 +22,10 @@ return [
             'destination' => 'c,r,u,d',
             'excursions' => 'c,r,u,d',
             'packages' => 'c,r,u,d',
+            'plans' => 'c,r,u,d',
+            'seasons' => 'c,r,u,d',
+            'days' => 'c,r,u,d',
+            'pages' => 'c,r,u,d',
 
         ],
         'administrator' => [
@@ -33,6 +37,10 @@ return [
             'destination' => 'c,r,u,d',
             'excursions' => 'c,r,u,d',
             'packages' => 'c,r,u,d',
+            'plans' => 'c,r,u,d',
+            'seasons' => 'c,r,u,d',
+            'days' => 'c,r,u,d',
+            'pages' => 'c,r,u,d',
         ],
         'user' => [
             'profile' => 'r,u',

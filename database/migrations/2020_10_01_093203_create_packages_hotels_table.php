@@ -17,11 +17,14 @@ class CreatePackagesHotelsTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('package_id');
+            $table->unsignedBigInteger('plan_id');
+
             $table->unsignedBigInteger('hotel_id');
 
             $table->timestamps();
             $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade');
             $table->foreign('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
+            $table->foreign('plan_id')->references('id')->on('plans')->onDelete('cascade');
 
         });
     }
