@@ -196,6 +196,7 @@
                                                                 @else
                                                                     <label>@lang('site.categories')</label>
                                                                 @endif
+
                                                                 <select class="select2" name="categories[]"
                                                                         multiple="multiple"
                                                                         data-placeholder="Select a Categories"

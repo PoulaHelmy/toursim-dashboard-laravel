@@ -21,31 +21,104 @@
   <component name="ChangeListManager">
     <list default="true" id="92ce5ba3-76e7-44ec-bcf6-5297c4fd3281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DestinationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DestinationsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExcursionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExcursionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Destination.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Destination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_01_092902_create_related_booking_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_01_092902_create_related_booking_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_01_092921_create_includes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_01_092921_create_includings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dashboard_files/plugins/bootstrap-tags/tagsinput.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dashboard_files/plugins/bootstrap-tags/tagsinput.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/0AvJ00ZKHx1dswiLBp3UEZpYaO3oDviht8ffLi43.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/8SkfGpi7eYhcEHfT091io26HDS55uSyQvCpVqirA.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/EH0a3KuXJw9wKKNvrMWOMXGVzMBr1eaK2ds1NJ2O.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/FILcY1u5YGqqs8NphDpg7t8JmGtQ1D3CfV6dTsdB.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/G6UVlY75M5irYu9J8qNrhAOZyfh4pAxuv6wLcZ78.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/IzCFIjuFOBiT8oQ0XIfko3Y5DOGJJE9MrIZ7nGKf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/RGUVoskjp2kJErOW5PM7dQKsBMlVnwCZQopy6aTg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/YR23hQYNVesjP5casvmvi6dQXS9KNjhY00e4mLCg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/buOrfdG3bNY5tdkwpbSdmOUaDlKe0LfRsfwp68Xb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/gLFCwu9lVim6ZiiYyrcXwLMqzO6v4LS9jQI5aMlt.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/m6Ubq0DLP6jOKVXNSBrXLisnShnYGjlFG8WUBs0b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/nPXnM6ThzIJoZOcQiC3W16OKQIyFXrVbcemwPeQ4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/ph7yA83Q88naLct5t2n2WKn40NsNxEfMvU9iSI6U.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/uK7GcoCixCJLL9Kvug9PClPeFKPi26enStjstH2R.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/xZts1LnCYyVvh8V3x69aZ6zDnKxfosc8zRYGefCo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/yXawMXdCBD48vpXhKkUEyyjlNto1ONWCdM6QGsYo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Categoriable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Categoriable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Excursion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Excursion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_01_094113_create_categoriable_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_01_094113_create_categoriables_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_01_133430_create_including_translations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_01_133430_create_including_translations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/0yPDGRyxsj3KgqbSBzLQo5BxIN1D43m6znEQaRTu.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/3BEHKIScWA10AF4gWYapy9YDU4afyrsLsFYmb6oz.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/3JZg4vY97KN8RAmNN7YBizNjvXKFkMKgDrlCewfE.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/3mEapa9Obo9hQGdULkwXorvl391De0NEK81ZUOKC.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/3xUUvpmf9C9JU8w1noON0zD5GXiSx82Z5dLQwpC1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/4mFclrW03mpnBdB3cHSQcRIcn16JCbcNLYCRr9gX.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/5Z98dwBQKzGAW7urLTGOwmWy9aHhw8xeBZhLKIEw.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/81u8YUrfJlEoySK1Bc1HgCdSMulY2LBzJDgWhW1K.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/8L4m4fzEHrQ15I6a6biYLLVcvhFjfGLRT2txt8bs.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/A0jds3T5IlMaFML3H4tgmWSGP2JegPf5In5SwmQW.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/A1mSPaEOu0XHc9eCxcvup6FrLONloilUyLLjGYqS.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/AtouuPx60tk5P0q6lSStRuovRqCsmGBMHhDTphf2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/B1jWNfnLZRF9Mjqj8qxd9qXKvKVzTKz2uLnXvDaa.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/BOzVW0jnROmqjApIGFNmOU53DfN24Vro3MsaV6FK.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/BdCd1Zzv4BjFj7BlJWMPyZuWTRVOl5qdXgLhqhhn.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/C0crFoTaOVfNWPSfJO0JkxaoGQVYVZ9jwYhkTQ5M.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/C43TDiY2b3ZCji4gV4IdqgCsW8J0QjFE14jENFfX.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/Dc70AiO1pVedOk44Vq6H2wQ5lbTpXipRyHN7G3dM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/DkdygBdl8JMFWBegjUgyV72rNhXU8DOWYRm4BPgH.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/E4XYjBLTwJd52VnvW8nRJAA4xAeMe9o3aGKceziO.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/EcuAdXyZRIU2fCZlM4TVX9QecMFzFlZXAS9Ge26g.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/ElhrQyHNrDErEh7ISpQkCv1P2O8eh9oTTfsrqJrw.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/FUo1U07jnSRWYxSLrpaOAHtG9b6jmAg4a20JPKKd.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/FvEWK2ZIAlZ0h2tH7U3wnd13oehPrgc9Ot0AaoZD.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/GJxUUMbSqlrtYzreeMRiYLDEekYXsI9kmvebqPJz.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/HUK6yb6gHmDCichBVdsO3Rwg4DXGSk4ewttUj0Ii.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/IzkgBTjNO5DYP1LTmSEbHsgJWNtfV1dpCMEg5wXi.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/K1fxGKAA2d2l2wLxrgD9ahQ2OvD1OvwYV3WLtwIg.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/KMf9LYF8J9vU5CMGCArSLjC6ZvctpK9D2hSYtXzv.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/KhrLaRZiN1AgUD5YaxkMBDalfxQy3uc7Rs3ejFWW.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/KpAFTfxeeA330poU5hcYisQEDYklSRhJhrNlrVGt.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/KsyaV4CUcvqvpiFeQKHBrLjGXPRNtQx57hmbDnYc.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/KzfTk1Wpirk8t15ntbX8w3YLjFFK0Ob9F0VagMZd.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/L7ecFKI3DFIA1R5FIDDnTVBjFR5MXgwmOYC68Mh9.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/LzqqTd0x6HiIkbT5smGAaXyZaJKYSHD2BQdSGrR9.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/MqUXTrYXc2JIDsOTwKA9sAagkvmSpi3jDcyun1F5.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/NaQIDaWLTKCCRB6pApO9YBP1JkkRNVxOH8VEwxNy.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/PkRSe04aMtThOTb8So9SR14URjyWy7FlxbD6zh5Z.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/QKqTbsVJv9nDfRoA8tKWFC33mV9w8gvkxLziskB9.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/RmwD9ORqeVDBRsPxAkRdHdCD52P4Whlccxd0uaey.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/RvsKdR2AHU5x0l2vcHfGxxn0AAf7o5KppfyGHNqL.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/RxWlfoRpK9nEXWWXGuscysHSjRLpShfbhhLFxruM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/ShfxaVI1mNuF3xukRwYYVL4z271WIMsnOVPHEmkO.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/T8lJLsJ32xE2L5OrJ7Ie9Eyp4QQfRjXGQO12nKtM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/TQJv80zpFK95Xi96ZmCsGLk3mwc0HJ6LzX6Q74pm.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/UFm5R0Tsumzd7XvrdIwayT1Du2QsyOufPdvXYgMA.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/VC4a92XltqUWPnz0wwolfZ6CAn29nGdcDKXSo5Qk.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/Wuw0GvaeOTsg7Rt8iT6xtg1k5dwQMubCoWZZ3IbP.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/Xcszr5EELc7M2BzMkGQfuzJnuX8HfWndZVmGWf98.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/bceIfkWCz05XN1MS4cwH7dsc9toriisG5AtZEHp9.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/bxi0usyS5Nzpy1zs6GczfGKDSysPFEaUHwOCuHM5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/cWkgsPpQJJuDL5AjgOmzGnBxRiKKKWevy8Fcr8hD.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/cc446uvuq3dpPqSkakHH45PwRgy76oKKjxM1cAXN.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/daigMQzGZzAA4Nh47sZZJaeMWbBIoI5bsq3KXat6.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/eKOBm4FXspZMlBxZCW6mn3QJmiFV38xZ4uG8TXEF.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/eP5a0rzcw51rPgfH7DMGkV5GzzpbLKYMLTcrsOzQ.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/eRi3tmBF0yT9wJrAJcOxTKZJ28N1eok4x3JziX1h.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/fMSX52YbTCLIkexuOBU46B0WaV4NAa9a8CzwolRQ.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/g0CUui5oJChBWJoF0TDVXU3Yn9qt8BlzioqY5K0G.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/gKwvBd8zqwC6FNLMf5VHMMZZGPyXSlgEoHiaK0xN.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/hhtCrL50F4oKrQSmYof9M73tIZktrvQS1pfLHOos.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/htkP6uEqkQEl3DQQH8Hk3w5IG7fRYmhxgjvikrGw.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/km8BGUWehZIYo9gNcGlYgTDGmyI07DIbp6OB0eUX.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/kuJaSln32cBZ0IkJ6edOS2TKi7X9qwi9E2OarENi.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/nK4eOlza93arbMOlf9xNZ4MGF6JXGABZkHtCV9Xe.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/nPxXEzn1YM3PI0DFM2RIdNFWRri8lVqLu7wuYIoN.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/nebYTSavdjFZv3pTa2clDZETcE97RnV72PrNuCVf.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/ntlpV4DLlm4rEbCOER8h56BtCyuMApWo6eTgaH29.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/og7oEAwgR3Eb94sgy3QpceXxi3n4wEn4t0SxsQ58.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pW4RtvRafZVjUOAw4sAfy7etowUkL8bET2FXAR66.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/phRy5m6rEyBseaFFhZWBt34HqABvUJDduW3kbyKT.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/phYtU4xANuZGDeFJQgUqziFXmpJq5zxR7OGClAgR.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/qtm1w42hyrDw4gv8Zzvx9fCnadIoXJryPQO2nnBk.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/qzlwEG5XuhlfnKsZXSuvr2okfug5K6IWCVPM2M8O.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/rpBXhjpOmHX9MVnS5g5Ur8lOyuCoWXIhCKRAwnuD.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/rtBp1Yig9RQqmhJLWo5snXEUmjjuSpq2Ss9zN5wZ.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/s40M0KmqvcWWScH4FYF3FbGUeGeAshhN4On33jtf.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/t4R38AUNGxbKRjj4mMb3DD1b4iDJruBKrDJiyGjB.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/t6PU9Iw9mQ3eiqBBJD59Kst51pDacKJTQ1JHqSMG.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/tlIBlrAVr1fvFipBC9LPZZlJtHQD01KENh6GerhJ.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/vivU6yBIv1cG1n66isXUCvsyf498AJHKi67yoYXD.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/wEY3hxGAkice1Q4TzHCoulf6AumjR1wbp5pCSRf2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/wcXUmnmE3KorAUszvmfkFlqRbEau3x04QSosjNpe.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/xbc0FNh6jeCJcHb9XLlaW82fTBu6NMWGGmgAv0bo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/xlLLi95xUw9NXmCqnR27MJf6OVVtP0x17wKBQiQP.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/ymlbBkyE8AhuyPLPukGPBPkFYjW2C9gw14hXVt8T.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/zCDSosskkZH5c6kb0xkBftJfCt0sulZ8ODL2XwoB.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/excursions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/excursions/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/excursions/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/excursions/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/excursions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/excursions/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/app.blade.php" afterDir="false" />
     </list>
@@ -60,6 +133,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -241,6 +315,7 @@
       <workItem from="1601363916423" duration="26626000" />
       <workItem from="1601450627595" duration="23665000" />
       <workItem from="1601536735342" duration="24564000" />
+      <workItem from="1601579936797" duration="12295000" />
     </task>
     <servers />
   </component>
@@ -269,11 +344,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1601460586936" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601559691832">
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601641145086">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738/-1920.-156.1920.1050@0.0.1366.738" timestamp="1601559691832" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1601477209486" />
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1601641145086" />
     <state x="532" y="277" key="Create Controller" timestamp="1601298229408">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -290,10 +365,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1601364740560" />
-    <state x="184" y="13" key="SettingsEditor" timestamp="1601464477387">
+    <state x="184" y="13" key="SettingsEditor" timestamp="1601634215715">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="184" y="13" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1601464477387" />
+    <state x="184" y="13" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1601634215715" />
     <state x="404" y="110" width="540" height="540" key="StructurePopup" timestamp="1601472051436">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -322,10 +397,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1601378070131" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1601558237342">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1601636308572">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/-1920.-156.1920.1050@0.0.1366.738" timestamp="1601558237342" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1601473185865" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1601636308572" />
   </component>
 </project>

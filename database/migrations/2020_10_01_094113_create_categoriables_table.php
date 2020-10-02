@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriableTable extends Migration
+class CreateCategoriablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCategoriableTable extends Migration
      */
     public function up()
     {
-        Schema::create('categoriable', function (Blueprint $table) {
+        Schema::create('categoriables', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->morphs('categoriable');
@@ -30,6 +30,6 @@ class CreateCategoriableTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categoriable');
+        Schema::dropIfExists('categoriables');
     }
 }

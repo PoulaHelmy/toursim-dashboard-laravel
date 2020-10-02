@@ -35,29 +35,62 @@ class ExcursionsController extends Controller
         return view('dashboard.excursions.create', compact('categories', 'destinations'));
     }//end of create
 
-    public function edit(Destination $destination)
+    public function edit(Excursion $excursion)
     {
-        $seoAttrbutes = $destination->seoAttributes;
-        $photos = $destination->photos;
-        return view('dashboard.excursions.edit', compact('destination', 'seoAttrbutes', 'photos'));
+        $allCategories = Category::all();
+        $allDestinations = Destination::all();
+        $allSelectedCAtegories = [];
+        foreach ($excursion->includes as $inc) {
+            if ($inc->type === 0) {
+                $excludes = $inc;
+            }
+            if ($inc->type === 1) {
+                $includes = $inc;
+            }
+        }
+        foreach ($excursion->categories as $cat) {
+            array_push($allSelectedCAtegories, $cat->id);
+        }
+        return view('dashboard.excursions.edit', compact('excursion', 'allCategories', 'allSelectedCAtegories', 'allDestinations', 'excludes', 'includes'));
     }//end of edit
 
     public function store(Request $request)
     {
-//        dd($request->all());
+        dd($request->all());
         $request_array = $request->all();
-        $excursion = Excursion::create($request->all());
 
+        /*--------------------Excursion CREATING-----------------*/
+        //Update Excursion Model With Destination_id
+        $excursion = Excursion::create($request->all());
+        /*--------------------END Excursion CREATING-------------*/
+
+        /*--------------------SEO CREATING-----------------*/
         $request_array['seoable_id'] = $excursion->id;
         $request_array['seoable_type'] = 'App\Models\Excursion';
 
-        $bannerImage = $this->storeImage($request->banner_url, 300, null);
-        $thumbImage = $this->storeImage($request->thumb_url, 150, 150);
         $og_ar_image = $this->storeImage($request->all()['ar']['og_image'], 300, null);
         $og_en_image = $this->storeImage($request->all()['en']['og_image'], 300, null);
 
         $request_array['ar']['og_image'] = $og_ar_image->filename . '.' . $og_ar_image->extension;
         $request_array['en']['og_image'] = $og_en_image->filename . '.' . $og_en_image->extension;
+
+        Seo::create($request_array);
+        /*--------------------END SEO CREATING-------------*/
+
+        /*--------------------PHOTOS CREATING-----------------*/
+        $bannerImage = $this->storeImage($request->banner_url, 300, null);
+        $thumbImage = $this->storeImage($request->thumb_url, 150, 150);
+        Photo::create([
+            'banner_url' => $bannerImage->filename . '.' . $bannerImage->extension,
+            'thumb_url' => $thumbImage->filename . '.' . $thumbImage->extension,
+            'banner_alt' => $request->banner_alt,
+            'thumb_alt' => $request->thumb_alt,
+            'photoable_id' => $excursion->id,
+            'photoable_type' => 'App\Models\Excursion',
+        ]);
+        /*--------------------END PHOTOS CREATING-------------*/
+
+        /*--------------------Including & Excluding CREATING-----------------*/
         Including::create([
             'ar' => [
                 'name' => $request->all()['ar']['includes']
@@ -66,7 +99,7 @@ class ExcursionsController extends Controller
                 'name' => $request->all()['en']['includes']
             ]
             ,
-            'type' => '0',
+            'type' => '1',
             'includable_id' => $excursion->id,
             'includable_type' => 'App\Models\Excursion',
         ]);
@@ -76,19 +109,13 @@ class ExcursionsController extends Controller
             ],
             'en' => [
                 'name' => $request->all()['en']['excludes']
-            ], 'type' => '1',
+            ], 'type' => '0',
             'includable_id' => $excursion->id,
             'includable_type' => 'App\Models\Excursion',
         ]);
-        Seo::create($request_array);
-        Photo::create([
-            'banner_url' => $bannerImage->filename . '.' . $bannerImage->extension,
-            'thumb_url' => $thumbImage->filename . '.' . $thumbImage->extension,
-            'banner_alt' => $request->banner_alt,
-            'thumb_alt' => $request->thumb_alt,
-            'photoable_id' => $excursion->id,
-            'photoable_type' => 'App\Models\Excursion',
-        ]);
+        /*--------------------END Including & Excluding CREATING-------------*/
+
+        /*--------------------Categories CREATING-----------------*/
         foreach ($request->get('categories') as $category) {
             Categoriable::create([
                 'category_id' => $category,
@@ -96,6 +123,9 @@ class ExcursionsController extends Controller
                 'categoriable_type' => 'App\Models\Excursion'
             ]);
         }
+        /*--------------------END Categories CREATING-------------*/
+
+        /*--------------------GALLARY CREATING-----------------*/
         foreach ($request->slider as $image) {
             $photo = $this->storeImage($image, 300, null);
             Gallary::create([
@@ -105,57 +135,155 @@ class ExcursionsController extends Controller
                 'gallarable_type' => 'App\Models\Excursion'
             ]);
         }
+        /*--------------------END GALLARY CREATING-------------*/
+
         session()->flash('success', __('site.added_successfully'));
         return redirect()->route('excursions.index');
     }//end of store
 
     public
-    function update(Request $request, Destination $destination)
+    function update(Request $request, Excursion $excursion)
     {
         $request_array = $request->all();
-        $destination->update($request->all());
 
-        $seo = Seo::where('id', $destination->seoAttributes['id'])->first();
-        $photos = Photo::where('id', $destination->photos['id'])->first();
+        /*--------------------Excursion UPDATING-----------------*/
+        //Update Excursion Model With Destination_id
+        $excursion->update($request->all());
+        /*--------------------END Excursion UPDATING-------------*/
 
-        Storage::disk('public_uploads')->delete('/' . $photos->banner_url);
-        Storage::disk('public_uploads')->delete('/' . $photos->thumb_url);
-        Storage::disk('public_uploads')->delete('/' . $seo->translate('ar')['og_image']);
-        Storage::disk('public_uploads')->delete('/' . $seo->translate('en')['og_image']);
+        /*--------------------SEO UPDATING-----------------------*/
+        //        Update SEO
+        $seo = Seo::where('id', $excursion->seoAttributes['id'])->first();
 
-        $bannerImage = $this->storeImage($request->banner_url, 300, null);
-        $thumbImage = $this->storeImage($request->thumb_url, 150, 150);
+        //        Delete Images FROM DISK
+        $this->delete_Image_From_Disk($seo->translate('ar')['og_image']);
+        $this->delete_Image_From_Disk($seo->translate('en')['og_image']);
+
+        //        Store New Images
         $og_ar_image = $this->storeImage($request->all()['ar']['og_image'], 300, null);
         $og_en_image = $this->storeImage($request->all()['en']['og_image'], 300, null);
 
-
         $request_array['ar']['og_image'] = $og_ar_image->filename . '.' . $og_ar_image->extension;
         $request_array['en']['og_image'] = $og_en_image->filename . '.' . $og_en_image->extension;
+
+        //        UPDATE SEO
+        $seo->update($request_array);
+        /*--------------------END SEO UPDATING-----------------------*/
+
+        /*--------------------PHOTOS UPDATING-----------------------*/
+        $photos = Photo::where('id', $excursion->photos['id'])->first();
+
+        $this->delete_Image_From_Disk($photos->banner_url);
+        $this->delete_Image_From_Disk($photos->thumb_url);
+
+        $bannerImage = $this->storeImage($request->banner_url, 300, null);
+        $thumbImage = $this->storeImage($request->thumb_url, 150, 150);
+
         $request_array['banner_url'] = $bannerImage->filename . '.' . $bannerImage->extension;
         $request_array['thumb_url'] = $thumbImage->filename . '.' . $thumbImage->extension;
 
-
         $photos->update($request_array);
-        $seo->update($request_array);
+        /*--------------------END PHOTOS UPDATING-----------------------*/
+
+        /*--------------------Gallary UPDATING-----------------------*/
+        foreach ($excursion->gallary as $img) {
+            // DELETE IMAGE FROM DISK
+            $this->delete_Image_From_Disk($img->url);
+            //DELETE IMAGE FROM DATA BASE
+            $img->delete();
+        }
+        foreach ($request->slider as $image) {
+            $photo = $this->storeImage($image, 300, null);
+            Gallary::create([
+                'url' => $photo->filename . '.' . $photo->extension,
+                'alt' => 'NEW SLIDER EXCURSION IMAGE',
+                'gallarable_id' => $excursion->id,
+                'gallarable_type' => 'App\Models\Excursion'
+            ]);
+        }
+        /*--------------------END Gallary UPDATING-------------------*/
+
+        /*--------------------Categories UPDATING--------------------*/
+        $excursion->categories()->sync($request_array['categories']);
+        /*--------------------END Categories UPDATING----------------*/
+
+        /*--------------------Including & Excluding UPDATING--------------------*/
+        foreach ($excursion->includes as $inc) {
+            if ($inc->type === 0) {
+                $inc->update(
+                    [
+                        'ar' => [
+                            'name' => $request->all()['ar']['excludes']
+                        ],
+                        'en' => [
+                            'name' => $request->all()['en']['excludes']
+                        ]
+                    ]
+                );
+            }
+            if ($inc->type === 1) {
+                $inc->update(
+                    [
+                        'ar' => [
+                            'name' => $request->all()['ar']['includes']
+                        ],
+                        'en' => [
+                            'name' => $request->all()['en']['includes']
+                        ]
+                    ]
+                );
+            }
+        }
+        /*--------------------END Including & Excluding UPDATING----------------*/
 
         session()->flash('success', __('site.updated_successfully'));
         return redirect()->route('excursions.index');
     }//end of update
 
     public
-    function destroy(Destination $destination)
+    function destroy(Excursion $excursion)
     {
-        $seo = Seo::where('id', $destination->seoAttributes['id'])->first();
-        $photos = Photo::where('id', $destination->photos['id'])->first();
 
-        Storage::disk('public_uploads')->delete('/' . $photos->banner_url);
-        Storage::disk('public_uploads')->delete('/' . $photos->thumb_url);
-        Storage::disk('public_uploads')->delete('/' . $seo->translate('ar')['og_image']);
-        Storage::disk('public_uploads')->delete('/' . $seo->translate('en')['og_image']);
-
-        $destination->delete();
+        /*--------------------DELETE SEO----------------*/
+        $seo = Seo::where('id', $excursion->seoAttributes['id'])->first();
+        $this->delete_Image_From_Disk($seo->translate('ar')['og_image']);
+        $this->delete_Image_From_Disk($seo->translate('en')['og_image']);
         $seo->delete();
+        /*--------------------DELETE SEO----------------*/
+
+        /*--------------------DELETE PHOTOS----------------*/
+        $photos = Photo::where('id', $excursion->photos['id'])->first();
+        $this->delete_Image_From_Disk($photos->banner_url);
+        $this->delete_Image_From_Disk($photos->thumb_url);
         $photos->delete();
+        /*--------------------DELETE PHOTOS----------------*/
+
+        /*--------------------DELETE GALLARY----------------*/
+        foreach ($excursion->gallary as $img) {
+            // DELETE IMAGE FROM DISK
+            $this->delete_Image_From_Disk($img->url);
+            //DELETE IMAGE FROM DATA BASE
+            $img->delete();
+        }
+        /*--------------------DELETE GALLARY----------------*/
+
+        /*--------------------DELETE CATEGORIES----------------*/
+        $cats = Categoriable::where('categoriable_id', $excursion->id)->get();
+        foreach ($cats as $cat) {
+            $cat->delete();
+        }
+        /*--------------------DELETE CATEGORIES----------------*/
+
+        /*--------------------DELETE INCLUDING & EXCLUDING----------------*/
+        foreach ($excursion->includes as $inc) {
+            $inc->delete();
+        }
+        /*--------------------DELETE INCLUDING & EXCLUDING----------------*/
+
+        /*--------------------DELETE EXCURSION----------------*/
+        $excursion->delete();
+        /*--------------------DELETE EXCURSION----------------*/
+
         session()->flash('success', __('site.deleted_successfully'));
         return redirect()->route('excursions.index');
     }//END OF Destroy
@@ -166,5 +294,10 @@ class ExcursionsController extends Controller
         return Image::make($image)->resize($width, $height, function ($constraint) {
             $constraint->aspectRatio();
         })->save(public_path('uploads/' . $image->hashName()));
-    }//End Of Store
+    }//End Of storeImage
+
+    public function delete_Image_From_Disk($image)
+    {
+        Storage::disk('public_uploads')->delete('/' . $image);
+    }//End Of delete_Image_From_Disk
 }//END OF CLASS

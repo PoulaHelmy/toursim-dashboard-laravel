@@ -19,7 +19,7 @@ class CreateIncludingTranslationsTable extends Migration
             $table->text('name');
             $table->string('locale')->index();
             $table->unique(['including_id', 'locale']);
-            $table->foreign('including_id')->references('id')->on('including')->onDelete('cascade');
+            $table->foreign('including_id')->references('id')->on('includings')->onDelete('cascade');
 
             $table->timestamps();
         });

@@ -38,7 +38,7 @@
                                                     <button type="submit" class="btn btn-primary"><i
                                                             class="fa fa-search"></i> @lang('site.search')</button>
                                                     @if (auth()->user()->hasPermission('create_excursions'))
-                                                        <a href="{{ route('categories.create') }}"
+                                                        <a href="{{ route('excursions.create') }}"
                                                            class="btn btn-primary"><i
                                                                 class="fa fa-plus"></i> @lang('site.add')</a>
                                                     @else
@@ -77,11 +77,11 @@
                                             </td>
                                             <td>
                                                 {{--                                                @if (auth()->user()->hasPermission('read_excursions'))--}}
-                                                {{--                                                    <a href="{{ route('categories.show',  $row->id) }}"--}}
+                                                {{--                                                    <a href="{{ route('excursions.show',  $row->id) }}"--}}
                                                 {{--                                                       class="btn btn-info btn-sm">@lang('site.show')</a>--}}
                                                 {{--                                                @endif--}}
                                                 @if (auth()->user()->hasPermission('update_excursions'))
-                                                    <a href="{{ route('categories.edit', $row->id) }}"
+                                                    <a href="{{ route('excursions.edit', $row->id) }}"
                                                        class="btn btn-info btn-sm"><i
                                                             class="fa fa-edit"></i> @lang('site.edit')
                                                     </a>
@@ -90,7 +90,7 @@
                                                             class="fa fa-edit"></i> @lang('site.edit')</a>
                                                 @endif
                                                 @if (auth()->user()->hasPermission('delete_excursions'))
-                                                    <form action="{{ route('categories.destroy', $row->id) }}"
+                                                    <form action="{{ route('excursions.destroy', $row->id) }}"
                                                           method="post"
                                                           style="display: inline-block">
                                                         {{ csrf_field() }}

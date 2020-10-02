@@ -5,14 +5,13 @@
     <div class="content-wrapper">
         <!-- BREADCRUMBS -->
         <section class="content-header">
-            <h1>@lang('site.categories')</h1>
+            <h1>@lang('site.excursions')</h1>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="{{ route('welcome') }}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')
                     </a>
                 </li>
-                <li class="breadcrumb-item"><a href="{{ route('categories.index') }}"> @lang('site.categories')</a>
-                </li>
+                <li class="breadcrumb-item"><a href="{{ route('excursions.index') }}"> @lang('site.excursions')</a></li>
                 <li class=" breadcrumb-item active">@lang('site.edit')</li>
             </ol>
         </section>
@@ -25,12 +24,12 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">@lang('site.editcategory')</h3>
+                                <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">@lang('site.editexcursions')</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
                             @include('partials._error')
-                            <form action="{{ route('categories.update',$category->id) }}" method="post"
+                            <form action="{{ route('excursions.update',$excursion->id) }}" method="post"
                                   enctype="multipart/form-data">
                                 {{ csrf_field() }}
                                 {{ method_field('put') }}
@@ -42,6 +41,7 @@
 
                                             </div>
                                             <div class="card-body">
+                                                <!--        NAME AND SLUG               -->
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -52,7 +52,7 @@
                                                             @endif
                                                             <input type="text" name="{{ $locale }}[name]"
                                                                    class="form-control"
-                                                                   value="{{ $category->translate($locale)->name }}">
+                                                                   value="{{ $excursion->translate($locale)->name}}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -64,20 +64,67 @@
                                                             @endif
                                                             <input type="text" name="{{ $locale }}[slug]"
                                                                    class="form-control"
-                                                                   value="{{ $category->translate($locale)->slug }}">
+                                                                   value="{{ $excursion->translate($locale)->slug }}">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    @if(count(config('translatable.locales'))>1)
-                                                        <label>@lang('site.' . $locale . '.description')</label>
-                                                    @else
-                                                        <label>@lang('site.description')</label>
-                                                    @endif
-                                                    <textarea name="{{ $locale }}[description]"
-                                                              class="form-control ckeditor"> {{ $category->translate($locale)->description }}"</textarea>
+                                                <!--        RUN AND TYPE               -->
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            @if(count(config('translatable.locales'))>1)
+                                                                <label>@lang('site.' . $locale . '.run')</label>
+                                                            @else
+                                                                <label>@lang('site.run')</label>
+                                                            @endif
+                                                            <input type="text" name="{{ $locale }}[run]"
+                                                                   class="form-control"
+                                                                   value="{{ $excursion->translate($locale)->run }}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            @if(count(config('translatable.locales'))>1)
+                                                                <label>@lang('site.' . $locale . '.type')</label>
+                                                            @else
+                                                                <label>@lang('site.type')</label>
+                                                            @endif
+                                                            <input type="text" name="{{ $locale }}[type]"
+                                                                   class="form-control"
+                                                                   value="{{ $excursion->translate($locale)->type }}">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                @if($locale == 'en')
+                                                <!--        ENGLISH INPUTS ONNLY              -->
+                                            @if($locale == 'en')
+                                                <!--       Start & DURATION               -->
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label>@lang('site.start')</label>
+                                                                <input type="number" name="start"
+                                                                       class="form-control"
+                                                                       value="{{ $excursion->start }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label>@lang('site.duration')</label>
+                                                                <input type="number" name="duration"
+                                                                       class="form-control"
+                                                                       value="{{ $excursion->duration }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label>@lang('site.discount')</label>
+                                                                <input type="number" name="discount"
+                                                                       class="form-control"
+                                                                       value="{{$excursion->discount }}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!----Banner  --->
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -85,7 +132,7 @@
                                                                 <div class="input-group">
                                                                     <div class="custom-file">
                                                                         <input type="file"
-                                                                               class="custom-file-input cat_banner_image"
+                                                                               class="custom-file-input ex_banner_image"
                                                                                id="exampleInputFile" name="banner_url">
                                                                         <label class="custom-file-label"
                                                                                for="exampleInputFile">Choose
@@ -99,10 +146,11 @@
                                                                 <label>Banner Alt</label>
                                                                 <input type="text" name="banner_alt"
                                                                        class="form-control"
-                                                                       value="{{ $photos->banner_alt }}">
+                                                                       value="{{ $excursion->photos->banner_alt }}">
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <!---- Thumb --->
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
@@ -110,7 +158,7 @@
                                                                 <div class="input-group">
                                                                     <div class="custom-file">
                                                                         <input type="file"
-                                                                               class="custom-file-input cat_thumb_image"
+                                                                               class="custom-file-input ex_thumb_image"
                                                                                id="exampleInputFile" name="thumb_url">
                                                                         <label class="custom-file-label"
                                                                                for="exampleInputFile">Choose
@@ -123,7 +171,7 @@
                                                             <div class="form-group">
                                                                 <label>Thumb Alt</label>
                                                                 <input type="text" name="thumb_alt" class="form-control"
-                                                                       value="{{ $photos->thumb_alt}}">
+                                                                       value="{{ $excursion->photos->thumb_alt }}">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -131,113 +179,305 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <h4 class="display-5">Banner Image</h4>
-                                                            <img src="{{asset('uploads/'.$photos->banner_url)}}"
-                                                                 width="150px"
-                                                                 height="150px"
-                                                                 class="img-thumbnail  cat_banner_image_preview">
+                                                            <img
+                                                                src="{{asset('uploads/'.$excursion->photos->banner_url)}}"
+                                                                width="150px" height="150px"
+                                                                class="img-thumbnail  ex_banner_image_preview">
                                                         </div>
                                                         <div class="col-md-6">
                                                             <h4 class="display-5">Thumb Image</h4>
-                                                            <img src="{{asset('uploads/'.$photos->thumb_url)}}"
-                                                                 width="150px"
-                                                                 height="150px"
-                                                                 class="img-thumbnail  cat_thumb_image_preview">
+                                                            <img
+                                                                src="{{asset('uploads/'.$excursion->photos->thumb_url)}}"
+                                                                width="150px" height="150px"
+                                                                class="img-thumbnail  ex_thumb_image_preview">
                                                         </div>
                                                     </div>
-                                                @endif
-                                                <div class=" from-group">
-                                                    @if(count(config('translatable.locales'))>1)
-                                                        <label>@lang('site.' . $locale . '.page_title')</label>
-                                                    @else
-                                                        <label>@lang('site.page_title')</label>
-                                                    @endif
-                                                    <input type=" text" name="{{ $locale }}[page_title]"
-                                                           class="form-control"
-                                                           value="{{ $seoAttrbutes->translate($locale)->page_title }}">
-                                                </div>
-                                                <div class="form-group">
-                                                    @if(count(config('translatable.locales'))>1)
-                                                        <label>@lang('site.' . $locale . '.meta_description')</label>
-                                                    @else
-                                                        <label>@lang('site.meta_description')</label>
-                                                    @endif
-                                                    <textarea name="{{ $locale }}[meta_description]"
-                                                              class="form-control ckeditor"> {{ $seoAttrbutes->translate($locale)->meta_description }}"</textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    @if(count(config('translatable.locales'))>1)
-                                                        <label>@lang('site.' . $locale . '.og_description')</label>
-                                                    @else
-                                                        <label>@lang('site.og_description')</label>
-                                                    @endif
-                                                    <textarea name="{{ $locale }}[og_description]"
-                                                              class="form-control ckeditor"> {{ $seoAttrbutes->translate($locale)->og_description }}"</textarea>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            @if(count(config('translatable.locales'))>1)
-                                                                <label>@lang('site.' . $locale . '.og_title')</label>
-                                                            @else
-                                                                <label>@lang('site.og_title')</label>
-                                                            @endif
-                                                            <input name="{{ $locale }}[og_title]"
-                                                                   class="form-control "
-                                                                   value="{{ $seoAttrbutes->translate($locale)->og_title }}">
+                                                    <!--        CATEGORIES && DESTINATIONS              -->
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                @if(count(config('translatable.locales'))>1)
+                                                                    <label>@lang('site.' . $locale . '.categories')</label>
+                                                                @else
+                                                                    <label>@lang('site.categories')</label>
+                                                                @endif
+                                                                <select class="select2" multiple="multiple"
+                                                                        name="categories[]"
+                                                                        multiple="multiple"
+                                                                        data-placeholder="Select a Categories"
+                                                                        data-dropdown-css-class="select2-purple"
+                                                                        style="width: 100%;">
+                                                                    @foreach ($allCategories as $category)
+                                                                        <option
+                                                                            value="{{ $category->id }}" {{ in_array( $category->id, $allSelectedCAtegories) ? 'selected' : '' }}>{{$category->name }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                @if(count(config('translatable.locales'))>1)
+                                                                    <label>@lang('site.' . $locale . '.destinations')</label>
+                                                                @else
+                                                                    <label>@lang('site.destinations')</label>
+                                                                @endif
+                                                                <select name="destination_id" class="form-control">
+                                                                    @foreach ($allDestinations as $destination)
+                                                                        <option
+                                                                            value="{{ $destination->id }}" {{$excursion->destination_id == $destination->id ? 'selected' : ''}}>{{$destination->name }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            @if(count(config('translatable.locales'))>1)
-                                                                <label>@lang('site.' . $locale . '.og_image')</label>
-                                                            @else
-                                                                <label>@lang('site.og_image')</label>
-                                                            @endif
-                                                            <div class="input-group">
-                                                                <div class="custom-file">
-                                                                    <input type="file" class="custom-file-input"
-                                                                           id="exampleInputFile"
-                                                                           name="{{ $locale }}[og_image]">
-                                                                    <label class="custom-file-label"
-                                                                           for="exampleInputFile">Choose
-                                                                        file</label>
+                                                    <!--        SLIDER              -->
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label for="exampleInputFile">Silder Images</label>
+                                                                <div class="input-group">
+                                                                    <div class="custom-file">
+                                                                        <input type="file"
+                                                                               class="custom-file-input"
+                                                                               id="exampleInputFile" name="slider[]"
+                                                                               multiple accept="image/png, image/jpeg">
+                                                                        <label class="custom-file-label"
+                                                                               for="exampleInputFile">Choose
+                                                                            filea</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="card card-primary">
+                                                                <div class="card-header">
+                                                                    <div class="card-title">
+                                                                        Slider Images
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <div class="row">
+                                                                        @foreach($excursion->gallary as $index => $image)
+                                                                            <div class="col-sm-2">
+                                                                                <img
+                                                                                    src="{{asset('/uploads/'.$image->url)}}"
+                                                                                    class="img-fluid mb-2"
+                                                                                    alt="{{$image->alt}}"/>
+                                                                            </div>
+                                                                        @endforeach
+
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    @if(count(config('translatable.locales'))>1)
-                                                        <label>@lang('site.' . $locale . '.meta_keywords')</label>
-                                                    @else
-                                                        <label>@lang('site.meta_keywords')</label>
-                                                    @endif
-                                                    <input name="{{ $locale }}[meta_keywords]"
-                                                           data-role="tagsinput"
-                                                           type="text"
-                                                           class="form-control"
-                                                           value="{{  $seoAttrbutes->translate($locale)->meta_keywords }}">
-
-
-                                                </div>
-
-
                                             </div>
+                                        @endif
+
+                                        <!--     SHORT DESCRIPTION       -->
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.short_description')</label>
+                                                        @else
+                                                            <label>@lang('site.short_description')</label>
+                                                        @endif
+                                                        <textarea name="{{ $locale }}[short_description]"
+                                                                  class="form-control ckeditor">{{$excursion->translate($locale)->short_description}}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--        OverView              -->
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="mb-3 ">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.overview')</label>
+                                                        @else
+                                                            <label>@lang('site.overview')</label>
+                                                        @endif
+                                                        <textarea name="{{ $locale }}[overview]"
+                                                                  class="form-control ckeditor summernote">{{ $excursion->translate($locale)->overview}}</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--        INCLUDED              -->
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.includes')</label>
+                                                        @else
+                                                            <label>@lang('site.includes')</label>
+                                                        @endif
+                                                        <input name="{{ $locale }}[includes]"
+                                                               data-role="tagsinput"
+                                                               type="text"
+                                                               placeholder="includes +"
+                                                               class="form-control"
+                                                               value="{{$includes->translate($locale)->name}}">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--        EXCLUDED              -->
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.excludes')</label>
+                                                        @else
+                                                            <label>@lang('site.excludes')</label>
+                                                        @endif
+                                                        <input name="{{ $locale }}[excludes]"
+                                                               data-role="tagsinput"
+                                                               type="text"
+                                                               placeholder="excludes +"
+
+                                                               class="form-control"
+                                                               value="{{$excludes->translate($locale)->name}}">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <span class="h3 my-4">Search Engine Optimization (SEO):</span>
+                                            <!-- PAGE TITLE & META DESCRIPTION--->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.page_title')</label>
+                                                        @else
+                                                            <label>@lang('site.page_title')</label>
+                                                        @endif
+                                                        <input type="text" name="{{ $locale }}[page_title]"
+                                                               class="form-control"
+                                                               value="{{$excursion->seoAttributes->translate($locale)->page_title}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.meta_description')</label>
+                                                        @else
+                                                            <label>@lang('site.meta_description')</label>
+                                                        @endif
+                                                        <textarea name="{{ $locale }}[meta_description]"
+                                                                  class="form-control ckeditor">{{$excursion->seoAttributes->translate($locale)->meta_description}}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- og_title & og_image-->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.og_title')</label>
+                                                        @else
+                                                            <label>@lang('site.og_title')</label>
+                                                        @endif
+                                                        <input name="{{ $locale }}[og_title]"
+                                                               class="form-control "
+                                                               value="{{$excursion->seoAttributes->translate($locale)->og_title}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.og_image')</label>
+                                                        @else
+                                                            <label>@lang('site.og_image')</label>
+                                                        @endif
+                                                        <div class="input-group">
+                                                            <div class="custom-file">
+                                                                <input type="file" class="custom-file-input"
+                                                                       id="exampleInputFile"
+                                                                       name="{{ $locale }}[og_image]"
+                                                                       value="{{$excursion->seoAttributes->translate($locale)->og_image}}">
+                                                                <label class="custom-file-label"
+                                                                       for="exampleInputFile">Choose
+                                                                    file</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- OG:META DESCRIPTION && META KEYWORDS--->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.og_description')</label>
+                                                        @else
+                                                            <label>@lang('site.og_description')</label>
+                                                        @endif
+                                                        <textarea name="{{ $locale }}[og_description]"
+                                                                  class="form-control ckeditor">{{$excursion->seoAttributes->translate($locale)->og_description}}</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        @if(count(config('translatable.locales'))>1)
+                                                            <label>@lang('site.' . $locale . '.meta_keywords')</label>
+                                                        @else
+                                                            <label>@lang('site.meta_keywords')</label>
+                                                        @endif
+                                                        <input name="{{ $locale }}[meta_keywords]"
+                                                               data-role="tagsinput"
+                                                               type="text"
+                                                               class="form-control"
+                                                               value="{{$excursion->seoAttributes->translate($locale)->meta_keywords}}">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                </div>
+                                @endforeach
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>@lang('site.status')</label>
+                                            <input type="checkbox" name="status"
+                                                   value="1"
+                                                   data-bootstrap-switch
+                                                   class="form-control" {{$excursion->status === 1 ? 'checked' :''}}>
+
                                         </div>
 
-                                    @endforeach
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>@lang('site.featured')</label>
+                                            <input type="checkbox" name="featured"
+                                                   value="1"
+                                                   data-bootstrap-switch
+                                                   class="form-control" {{$excursion->featured === 1 ? 'checked' :''}}>
+
+                                        </div>
+
+                                    </div>
                                 </div>
-                                <!-- /.card-body -->
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">@lang('site.edit')</button>
-                                </div>
-                            </form>
+
                         </div>
-                        <!-- /.card -->
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">@lang('site.add')</button>
+                        </div>
+                        </form>
                     </div>
+                    <!-- /.card -->
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div><!-- end of content wrapper -->
 
 @endsection

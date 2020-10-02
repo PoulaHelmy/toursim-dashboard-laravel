@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/jqvmap/jqvmap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/bootstrap-tags/tagsinput.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('dashboard_files/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
 
 
     <!-- CSRF Token -->
@@ -43,6 +45,8 @@
           href="{{ asset('dashboard_files/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
     <link rel="stylesheet"
           href="{{ asset('dashboard_files/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('dashboard_files/plugins/ekko-lightbox/ekko-lightbox.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     {{--    {{ asset('dashboard_files/css/bootstrap.min.css') }}       --}}
@@ -114,7 +118,13 @@
 <script src="{{ asset('dashboard_files/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <script src="{{ asset('dashboard_files/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
 <script src="{{ asset('dashboard_files/plugins/bootstrap-tags/tagsinput.js') }}"></script>
+<script src="{{ asset('dashboard_files/plugins/ekko-lightbox/ekko-lightbox.min.js') }}"></script>
+
+
 <script src="{{ asset('dashboard_files/plugins/select2/js/select2.min.js') }}"></script>
+<script src="{{ asset('dashboard_files/plugins/inputmask/min/jquery.inputmask.bundle.min.js') }}"></script>
+<script
+    src="{{ asset('dashboard_files/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 <script
     src="{{ asset('dashboard_files/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js') }}"></script>
 <script src="{{ asset('dashboard_files/plugins/bootstrap-tags/tagsinput.js') }}"></script>
