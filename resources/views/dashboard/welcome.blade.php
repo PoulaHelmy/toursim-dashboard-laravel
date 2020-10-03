@@ -8,11 +8,11 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Main DashBoard</h1>
+                        <h1 class="m-0 text-dark">@lang('site.maindashboard')</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{route('welcome')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('welcome')}}">@lang('site.home')</a></li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -31,7 +31,7 @@
                                 <i
                                     class="nav-icon fas fa-suitcase"></i></a></span>
                             <div class="info-box-content">
-                                <span class="info-box-text">ALL Packages</span>
+                                <span class="info-box-text">@lang('site.allpackages')</span>
                                 <span class="info-box-number">
                                     {{$all_pkgs}}
                                 </span>
@@ -50,7 +50,7 @@
                             </span>
 
                             <div class="info-box-content">
-                                <span class="info-box-text">ALL Excursions </span>
+                                <span class="info-box-text">@lang('site.allexcursions') </span>
                                 <span class="info-box-number">{{$all_excursions}}</span>
                             </div>
                             <!-- /.info-box-content -->
@@ -69,7 +69,7 @@
                                     class="nav-icon fas fa-network-wired"></i></a>
                             </span>
                             <div class="info-box-content">
-                                <span class="info-box-text">ALL Categories</span>
+                                <span class="info-box-text">@lang('site.allcategory')</span>
                                 <span class="info-box-number">{{$all_cats}} </span>
                             </div>
                             <!-- /.info-box-content -->
@@ -84,7 +84,7 @@
                                 <i
                                     class="nav-icon fas fa-paper-plane"></i></a></span>
                             <div class="info-box-content">
-                                <span class="info-box-text">All Destinations</span>
+                                <span class="info-box-text">@lang('site.alldestinations')</span>
                                 <span class="info-box-number">{{$all_destinations}}</span>
                             </div>
                             <!-- /.info-box-content -->
@@ -104,7 +104,7 @@
                                       <i class="fas fa-cog"></i></a>
                             </span>
                             <div class="info-box-content">
-                                <span class="info-box-text">ALL Pages</span>
+                                <span class="info-box-text">@lang('site.allpages')</span>
                                 <span class="info-box-number">
                                     10
                                 </span>
@@ -120,7 +120,7 @@
                                     href="{{ route('hotels.index') }}"> <i
                                         class="nav-icon fas fa-hotel"></i></a></span>
                             <div class="info-box-content">
-                                <span class="info-box-text">ALL Hotels</span>
+                                <span class="info-box-text">@lang('site.allhotel')</span>
                                 <span class="info-box-number">{{$all_hotels}}</span>
                             </div>
                             <!-- /.info-box-content -->
@@ -138,7 +138,7 @@
                                 <a href="{{ route('plans.index') }}">  <i class="fas fa-money-check-alt"></i></a>
                             </span>
                             <div class="info-box-content">
-                                <span class="info-box-text">ALL Plans</span>
+                                <span class="info-box-text">@lang('site.allplans')</span>
                                 <span class="info-box-number">{{$all_plans}}</span>
                             </div>
                             <!-- /.info-box-content -->
@@ -153,7 +153,7 @@
                                   <a href="http://tour.devel/laratrust">
                                       <i class="fas fa-users"></i></a></span>
                             <div class="info-box-content">
-                                <span class="info-box-text">All Users</span>
+                                <span class="info-box-text">@lang('site.allusers')</span>
                                 <span class="info-box-number">{{$all_users}}</span>
                             </div>
                             <!-- /.info-box-content -->

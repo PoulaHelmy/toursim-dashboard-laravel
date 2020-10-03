@@ -29,7 +29,7 @@
                     <a href="{{route('welcome')}}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            @lang('site.dashboard')
                         </p>
                     </a>
                 </li>
@@ -58,7 +58,7 @@
                         <a href="#" class="nav-link ">
                             <i class="nav-icon fas fa-paper-plane"></i>
                             <p>
-                                Destinations
+                                @lang('site.destinations')
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -66,13 +66,13 @@
                             <li class="nav-item">
                                 <a href="{{route('destinations.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
-                                    <p>ALL Destinations</p>
+                                    <p> @lang('site.alldestinations')</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('destinations.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
-                                    <p>Add New Destination</p>
+                                    <p>@lang('site.adddestination')</p>
                                 </a>
                             </li>
                         </ul>
@@ -83,7 +83,7 @@
                         <a href="#" class="nav-link ">
                             <i class="nav-icon fas fa-network-wired"></i>
                             <p>
-                                Categories
+                                @lang('site.categories')
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -91,13 +91,13 @@
                             <li class="nav-item">
                                 <a href="{{route('categories.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
-                                    <p>ALL Categories</p>
+                                    <p>@lang('site.allcategory')</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('categories.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
-                                    <p>Add New Categories</p>
+                                    <p>@lang('site.addcategory')</p>
                                 </a>
                             </li>
                         </ul>
@@ -108,7 +108,7 @@
                         <a href="#" class="nav-link ">
                             <i class="nav-icon fas fa-suitcase"></i>
                             <p>
-                                Packages
+                                @lang('site.packages')
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -116,13 +116,13 @@
                             <li class="nav-item">
                                 <a href="{{route('packages.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
-                                    <p>ALL Packages</p>
+                                    <p>@lang('site.allpackages')</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('packages.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
-                                    <p>Add New Packages</p>
+                                    <p>@lang('site.addpackages')</p>
                                 </a>
                             </li>
                         </ul>
@@ -133,7 +133,7 @@
                         <a href="#" class="nav-link ">
                             <i class="nav-icon fas fa-umbrella"></i>
                             <p>
-                                Excursions
+                                @lang('site.excursions')
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -141,13 +141,13 @@
                             <li class="nav-item">
                                 <a href="{{route('excursions.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
-                                    <p>ALL Excursions</p>
+                                    <p>@lang('site.allexcursions')</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('excursions.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
-                                    <p>Add New Excursions</p>
+                                    <p>@lang('site.addexcursions')</p>
                                 </a>
                             </li>
                         </ul>
@@ -158,7 +158,7 @@
                         <a href="#" class="nav-link ">
                             <i class="nav-icon fas fa-hotel"></i>
                             <p>
-                                Hotels
+                                @lang('site.hotels')
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -166,13 +166,13 @@
                             <li class="nav-item">
                                 <a href="{{route('hotels.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
-                                    <p>ALL Hotels</p>
+                                    <p>@lang('site.allhotel')</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('hotels.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
-                                    <p>Add New Hotels</p>
+                                    <p>@lang('site.addhotel')</p>
                                 </a>
                             </li>
                         </ul>
@@ -183,7 +183,7 @@
                         <a href="#" class="nav-link ">
                             <i class="fas fa-money-check-alt"></i>
                             <p>
-                                Plans
+                                @lang('site.plans')
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -191,13 +191,13 @@
                             <li class="nav-item">
                                 <a href="{{route('plans.index')}}" class="nav-link ">
                                     <i class="fas fa-list-ol nav-icon"></i>
-                                    <p>ALL Plans</p>
+                                    <p>@lang('site.allplans')</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('plans.create')}}" class="nav-link">
                                     <i class="fas fa-plus nav-icon"></i>
-                                    <p>Add New Plans</p>
+                                    <p>@lang('site.addplans')</p>
                                 </a>
                             </li>
                         </ul>

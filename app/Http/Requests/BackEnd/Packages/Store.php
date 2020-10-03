@@ -13,7 +13,7 @@ class Store extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,54 @@ class Store extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
-        ];
+        $rules = [];
+        foreach (config('translatable.locales') as $locale) {
+            $rules += [$locale . '.name' => 'required|string'];
+            $rules += [$locale . '.slug' => 'required|string'];
+            $rules += [$locale . '.short_description' => 'required|string|max:150'];
+            $rules += [$locale . '.overview' => 'required|string'];
+
+            $rules += [$locale . '.includes' => 'required|string|max:150'];
+            $rules += [$locale . '.excludes' => 'required|string|max:150'];
+
+            $rules += [$locale . '.run' => 'required|string|max:150'];
+            $rules += [$locale . '.type' => 'required|string|max:150'];
+
+            $rules += ['duration' => 'required|integer'];
+            $rules += ['start' => 'required|integer'];
+            $rules += ['discount' => 'integer'];
+            $rules += ['status' => 'integer'];
+            $rules += ['featured' => 'integer'];
+            $rules += ['places' => 'required|integer'];
+
+            $rules += ['destination_id' => 'required|integer'];
+            $rules += ['categories.*' => 'required|integer'];
+            $rules += ['slider.*' => 'required|image:mimes,jpeg,png,gif'];
+
+            $rules += ['hotels.*.plan_id' => 'required|integer'];
+            $rules += ['hotels.*.hotels.*' => 'required|integer'];
+
+            $rules += ['seasons.*.start' => 'required|date'];
+            $rules += ['seasons.*.end' => 'required|date'];
+            $rules += ['seasons.*.price_list.*.price' => 'required|integer'];
+            $rules += ['seasons.*.price_list.*.plan_id' => 'required|integer'];
+            $rules += ['days.*.' . $locale . '.title' => 'required|string|max:150'];
+            $rules += ['days.*.' . $locale . '.summery' => 'required|string|max:200'];
+
+
+            $rules += ['banner_url' => 'required|image:mimes,jpeg,png,gif'];
+            $rules += ['banner_alt' => 'required|string|max:150'];
+            $rules += ['thumb_url' => 'required|image:mimes,jpeg,png,gif'];
+            $rules += ['thumb_alt' => 'required|string|max:150'];
+
+            $rules += [$locale . '.page_title' => 'required|string|max:150'];
+            $rules += [$locale . '.meta_keywords' => 'required|string'];
+            $rules += [$locale . '.meta_description' => 'required|string'];
+            $rules += [$locale . '.og_title' => 'required|string'];
+            $rules += [$locale . '.og_description' => 'required|string'];
+            $rules += [$locale . '.og_image' => 'required|image:mimes,jpeg,png,gif'];
+
+        }//end of  for each
+        return $rules;
     }
 }

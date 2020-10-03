@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Repository\Interfaces\PackagesRepositoryInterface;
+use App\Http\Requests\BackEnd\Packages\Store;
 use App\Models\Category;
 use App\Models\Destination;
 use App\Models\Hotel;
@@ -69,7 +70,7 @@ class PackagesController extends Controller
         ));
     }//end of edit
 
-    public function store(Request $request)
+    public function store(Store $request)
     {
         /*--------------------PACKAGE CREATING AND ALL DEPENDANDCIES -----------------*/
         $this->packagesRepository->StorePackage($request);

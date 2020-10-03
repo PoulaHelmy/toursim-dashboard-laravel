@@ -58,7 +58,8 @@
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>@lang('site.name')</th>
+                                        <th>@lang('site.arname')</th>
+                                        <th>@lang('site.enname')</th>
                                         @if (auth()->user()->hasPermission('update_plans','delete_plans'))
                                             <th>@lang('site.action')</th>
                                         @endif
@@ -69,7 +70,8 @@
                                     @foreach ($finalResults as $index=>$row)
                                         <tr>
                                             <td>{{ $index + 1+(($finalResults->currentPage()-1) * $finalResults->perPage()) }}</td>
-                                            <td>{{$row->name}}</td>
+                                            <td>{{$row->translate('en')->name}}</td>
+                                            <td>{{$row->translate('ar')->name}}</td>
                                             <td>
                                                 @if (auth()->user()->hasPermission('update_plans'))
                                                     <a href="{{ route('plans.edit', $row->id) }}"

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Dashboard\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Repository\Interfaces\ExcursionsRepositoryInterface;
+use App\Http\Requests\BackEnd\Excursions\Store;
+use App\Http\Requests\BackEnd\Excursions\Update;
 use App\Models\Category;
 use App\Models\Destination;
 use App\Models\Excursion;
@@ -52,7 +54,7 @@ class ExcursionsController extends Controller
         return view('dashboard.excursions.edit', compact('excursion', 'allCategories', 'allSelectedCAtegories', 'allDestinations', 'excludes', 'includes'));
     }//end of edit
 
-    public function store(Request $request)
+    public function store(Store $request)
     {
         $this->excursionsRepository->StoreExcursion($request);
         session()->flash('success', __('site.added_successfully'));
@@ -60,7 +62,7 @@ class ExcursionsController extends Controller
     }//end of store
 
     public
-    function update(Request $request, Excursion $excursion)
+    function update(Update $request, Excursion $excursion)
     {
         $this->excursionsRepository->UpdateExcursion($request, $excursion);
         session()->flash('success', __('site.updated_successfully'));

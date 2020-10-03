@@ -29,14 +29,14 @@
                                     <div class="col-12 col-md-8">
                                         <form action="{{ route('destinations.index') }}" method="get">
                                             <div class="row justify-content-end align-items-center">
+                                                {{--                                                <div class="col-md-4">--}}
+                                                {{--                                                    <input type="text" name="search" class="form-control"--}}
+                                                {{--                                                           placeholder="@lang('site.search')"--}}
+                                                {{--                                                           value="{{ request()->search }}">--}}
+                                                {{--                                                </div>--}}
                                                 <div class="col-md-4">
-                                                    <input type="text" name="search" class="form-control"
-                                                           placeholder="@lang('site.search')"
-                                                           value="{{ request()->search }}">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <button type="submit" class="btn btn-primary"><i
-                                                            class="fa fa-search"></i> @lang('site.search')</button>
+                                                    {{--                                                    <button type="submit" class="btn btn-primary"><i--}}
+                                                    {{--                                                            class="fa fa-search"></i> @lang('site.search')</button>--}}
                                                     @if (auth()->user()->hasPermission('create_destination'))
                                                         <a href="{{ route('destinations.create') }}"
                                                            class="btn btn-primary"><i

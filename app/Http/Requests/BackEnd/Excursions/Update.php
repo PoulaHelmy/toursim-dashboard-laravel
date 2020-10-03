@@ -4,7 +4,7 @@ namespace App\Http\Requests\BackEnd\Excursions;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class Store extends FormRequest
+class Update extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,8 +25,8 @@ class Store extends FormRequest
     {
         $rules = [];
         foreach (config('translatable.locales') as $locale) {
-            $rules += [$locale . '.name' => 'required|string|unique:excursion_translations,name'];
-            $rules += [$locale . '.slug' => 'required|string|unique:excursion_translations,slug'];
+            $rules += [$locale . '.name' => 'required|string'];
+            $rules += [$locale . '.slug' => 'required|string'];
             $rules += [$locale . '.short_description' => 'required|string|max:150'];
             $rules += [$locale . '.overview' => 'required|string'];
 

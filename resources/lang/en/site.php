@@ -36,6 +36,11 @@ return [
     'no_data_found' => 'Sorry No Data Found',
     'no_records' => 'Sorry No Records Found',
 
+
+    'arname' => 'Arabic Name',
+    'enname' => 'English Name',
+
+
     'addusers' => 'Add New User',
     'editusers' => 'Edit User',
     'phone' => 'Tel',
@@ -56,6 +61,7 @@ return [
 
 
     'name' => 'Name',
+    'home' => 'Home',
     'description' => 'Description',
     'created_at' => 'Created At',
 
@@ -183,4 +189,16 @@ return [
     'day_summery' => 'Day Summery',
     'season_start' => 'Season Start',
     'season_end' => 'Season End',
+
+    'alldestinations' => 'ALL Destinations',
+    'allcategory' => 'ALL Categories',
+    'allpackages' => 'ALL Packages',
+    'allexcursions' => 'ALL Excursions',
+    'allhotel' => 'ALL Hotels',
+    'allplans' => 'ALL Plans',
+    'allpages' => 'ALL Pages',
+    'allusers' => 'ALL Users',
+    'maindashboard' => 'Main DashBoard',
+
+
 ];

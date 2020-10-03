@@ -66,6 +66,9 @@ return [
     'name' => 'الاسم',
     'description' => 'الوصف',
 
+    'arname' => 'الاسم باللغة العربية',
+    'enname' => 'الاسم باللغة الانجليزية',
+
 
     'show_products' => 'عرض المنتجات',
     'created_at' => 'تم اضافته',
@@ -144,7 +147,7 @@ return [
     'star' => 'نجمة',
     'stars' => 'نجوم',
     'category' => 'الفئة',
-    'destinations' => 'الاماكن',
+    'destinations' => 'الواجهات',
     'slug' => 'الاسم المستعار',
     'categories' => 'الفئات',
     'page_title' => 'عنوان الصفحة',
@@ -184,4 +187,14 @@ return [
     'season_end' => 'Season End',
     'addusers' => 'Add New User',
     'editusers' => 'Edit User',
+    'alldestinations' => 'كل الواجهات',
+    'allcategory' => 'كل الفئات',
+    'allpackages' => 'كل الرحلات',
+    'allexcursions' => 'كل رحلات اليوم الواحد',
+    'allhotel' => 'كل الفنادق',
+    'allplans' => 'كل خطط الاسعار',
+    'allpages' => 'كل الصفحات',
+    'allusers' => 'كل المستخدمين',
+    'maindashboard' => 'لوحة التحكم الرئيسية',
+    'home' => 'الرئيسية',
 ];
