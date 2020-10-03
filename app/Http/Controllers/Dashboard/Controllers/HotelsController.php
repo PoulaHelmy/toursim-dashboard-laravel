@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard\Controllers;
 
+
+use App\Http\Controllers\Controller;
 use App\Http\Requests\BackEnd\Hotels\Store;
 use App\Models\Hotel;
 use Symfony\Component\HttpFoundation\Request;

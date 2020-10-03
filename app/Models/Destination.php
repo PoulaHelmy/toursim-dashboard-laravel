@@ -14,6 +14,7 @@ class Destination extends Model implements TranslatableContract
     public $useTranslationFallback = true;
     public $translatedAttributes = ['name', 'slug', 'description'];
     protected $fillable = ['name', 'slug', 'description'];
+    protected $with = ['seoAttributes', 'photos'];
 
     public function seoAttributes()
     {
@@ -28,5 +29,10 @@ class Destination extends Model implements TranslatableContract
     public function excursions()
     {
         return $this->hasMany('App\Models\Excursion');
+    }//End OF excursions
+
+    public function packages()
+    {
+        return $this->hasMany('App\Models\Package');
     }//End OF excursions
 }//End OF CLass

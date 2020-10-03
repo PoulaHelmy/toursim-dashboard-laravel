@@ -14,4 +14,18 @@ class Plan extends Model implements TranslatableContract
     public $useTranslationFallback = true;
     public $translatedAttributes = ['name'];
     protected $fillable = ['name'];
+    protected $with = ['pkgs_hotels'];
+
+
+    public function price_lists()
+    {
+        return $this->hasMany('App\Models\Pricelist');
+    }//END OF prriceLists
+
+    public function pkgs_hotels()
+    {
+        return $this->hasMany('App\Models\PackageHotel');
+    }//END OF pkgs_hotels
+
+
 }//END OF CLASS

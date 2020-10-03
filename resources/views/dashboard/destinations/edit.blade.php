@@ -99,7 +99,7 @@
                                                                 <label>Banner Alt</label>
                                                                 <input type="text" name="banner_alt"
                                                                        class="form-control"
-                                                                       value="{{ $photos->banner_alt }}">
+                                                                       value="{{ $destination->photos->banner_alt }}">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -123,7 +123,7 @@
                                                             <div class="form-group">
                                                                 <label>Thumb Alt</label>
                                                                 <input type="text" name="thumb_alt" class="form-control"
-                                                                       value="{{ $photos->thumb_alt}}">
+                                                                       value="{{ $destination->photos->thumb_alt}}">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -131,17 +131,19 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <h4 class="display-5">Banner Image</h4>
-                                                            <img src="{{asset('uploads/'.$photos->banner_url)}}"
-                                                                 width="150px"
-                                                                 height="150px"
-                                                                 class="img-thumbnail  dest_banner_image_preview">
+                                                            <img
+                                                                src="{{asset('uploads/'.$destination->photos->banner_url)}}"
+                                                                width="150px"
+                                                                height="150px"
+                                                                class="img-thumbnail  dest_banner_image_preview">
                                                         </div>
                                                         <div class="col-md-6">
                                                             <h4 class="display-5">Thumb Image</h4>
-                                                            <img src="{{asset('uploads/'.$photos->thumb_url)}}"
-                                                                 width="150px"
-                                                                 height="150px"
-                                                                 class="img-thumbnail  dest_thumb_image_preview">
+                                                            <img
+                                                                src="{{asset('uploads/'.$destination->photos->thumb_url)}}"
+                                                                width="150px"
+                                                                height="150px"
+                                                                class="img-thumbnail  dest_thumb_image_preview">
                                                         </div>
                                                     </div>
                                                 @endif
@@ -153,7 +155,7 @@
                                                     @endif
                                                     <input type=" text" name="{{ $locale }}[page_title]"
                                                            class="form-control"
-                                                           value="{{ $seoAttrbutes->translate($locale)->page_title }}">
+                                                           value="{{ $destination->seoAttributes->translate($locale)->page_title }}">
                                                 </div>
                                                 <div class="form-group">
                                                     @if(count(config('translatable.locales'))>1)
@@ -162,7 +164,7 @@
                                                         <label>@lang('site.meta_description')</label>
                                                     @endif
                                                     <textarea name="{{ $locale }}[meta_description]"
-                                                              class="form-control ckeditor"> {{ $seoAttrbutes->translate($locale)->meta_description }}"</textarea>
+                                                              class="form-control ckeditor"> {{ $destination->seoAttributes->translate($locale)->meta_description }}"</textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     @if(count(config('translatable.locales'))>1)
@@ -171,7 +173,7 @@
                                                         <label>@lang('site.og_description')</label>
                                                     @endif
                                                     <textarea name="{{ $locale }}[og_description]"
-                                                              class="form-control ckeditor"> {{ $seoAttrbutes->translate($locale)->og_description }}"</textarea>
+                                                              class="form-control ckeditor"> {{ $destination->seoAttributes->translate($locale)->og_description }}"</textarea>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -183,7 +185,7 @@
                                                             @endif
                                                             <input name="{{ $locale }}[og_title]"
                                                                    class="form-control "
-                                                                   value="{{ $seoAttrbutes->translate($locale)->og_title }}">
+                                                                   value="{{ $destination->seoAttributes->translate($locale)->og_title }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -216,7 +218,7 @@
                                                            data-role="tagsinput"
                                                            type="text"
                                                            class="form-control"
-                                                           value="{{  $seoAttrbutes->translate($locale)->meta_keywords }}">
+                                                           value="{{  $destination->seoAttributes->translate($locale)->meta_keywords }}">
 
 
                                                 </div>

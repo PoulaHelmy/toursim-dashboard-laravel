@@ -318,6 +318,9 @@
                                                                                 style="width: 100%;">
                                                                             @foreach ($allHotels as $hotel)
                                                                                 <option
+                                                                                    {{--                                                                                    @if($plan->pkgs_hotels)--}}
+                                                                                    {{--                                                                                    selected--}}
+                                                                                    {{--                                                                                    @endif {{in_array($hotel->id ,$plan->pkgs_hotels) ?'selected' : ''}}--}}
                                                                                     value="{{ $hotel->id }}">{{$hotel->name }}</option>
                                                                             @endforeach
                                                                         </select>
@@ -334,33 +337,37 @@
                                                 <!--        DAY INPUTS             -->
                                                     <div class="days_inputs">
                                                         <div class="days_inputs_container">
-                                                            <div class="card card-info">
-                                                                <div class="card-header">
-                                                                    <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">
-                                                                        DAY {{ $dayCounts }} </h3>
-                                                                </div>
-                                                                <div class="card-body">
-                                                                    <div class="row">
-                                                                        <div class="col-12">
-                                                                            <div class="form-group">
-                                                                                <label>@lang('site.day_title')</label>
-                                                                                <input type="text"
-                                                                                       name="days[{{$dayCounts}}][en][title]"
-                                                                                       class="form-control"
-                                                                                >
+                                                            @foreach($package->days as $index => $day)
+                                                                <div class="card card-info">
+                                                                    <div class="card-header">
+                                                                        <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">
+                                                                            DAY {{ $index+1 }} </h3>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="form-group">
+                                                                                    <label>@lang('site.day_title')</label>
+                                                                                    <input type="text"
+                                                                                           name="days[{{$dayCounts}}][en][title]"
+                                                                                           class="form-control"
+                                                                                           value="{{$day->translate('en')->title}}"
+                                                                                    >
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="col-12">
-                                                                            <div class="form-group">
-                                                                                <label>@lang('site.day_summery')</label>
-                                                                                <textarea
-                                                                                    name="days[{{$dayCounts}}][en][summery]"
-                                                                                    class="form-control ckeditor">{{ old($locale . '.summery') }}</textarea>
+                                                                            <div class="col-12">
+                                                                                <div class="form-group">
+                                                                                    <label>@lang('site.day_summery')</label>
+                                                                                    <textarea
+                                                                                        name="days[{{$dayCounts}}][en][summery]"
+                                                                                        class="form-control ckeditor">{{$day->translate('en')->summery}}</textarea>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            @endforeach
+
                                                         </div>
                                                         <button class="btn btn-secondary float-right my-2" type="button"
                                                                 id="add_day">Add Day
@@ -371,57 +378,62 @@
                                                     <!--        SEASONS INPUTS             -->
                                                     <div class="seasons_inputs">
                                                         <div class="seasons_container">
-                                                            <div class="card card-info">
-                                                                <div class="card-header">
-                                                                    <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">
-                                                                        Season {{$seasonCounts}} </h3>
-                                                                </div>
-                                                                <div class="card-body">
-                                                                    <div class="row">
-                                                                        <div class="col-md-6">
-                                                                            <div class="form-group">
-                                                                                <label>@lang('site.season_start')</label>
-                                                                                <input type="date"
-                                                                                       name="seasons[{{$seasonCounts}}][start]"
-                                                                                       class="form-control"
-                                                                                >
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <div class="form-group">
-                                                                                <label>@lang('site.season_end')</label>
-                                                                                <input type="date"
-                                                                                       name="seasons[{{$seasonCounts}}][end]"
-                                                                                       class="form-control"
-                                                                                >
-                                                                            </div>
-                                                                        </div>
+                                                            @foreach($package->seasons as $index => $season)
+                                                                <div class="card card-info">
+                                                                    <div class="card-header">
+                                                                        <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">
+                                                                            Season {{$index+1}} </h3>
                                                                     </div>
-                                                                    <div class="seasons_price_lists">
-                                                                        <div
-                                                                            class="row justify-content-center align-items-center">
-                                                                            @foreach($plans as  $index => $plan)
-                                                                                <div class="col-md-3">
-                                                                                    <div class="form-group">
-                                                                                        <label>{{$plan->translate()->name}}
-                                                                                            Price</label>
-                                                                                        <input type="number"
-                                                                                               name="seasons[{{$seasonCounts}}][price_list][{{$index}}][price]"
-                                                                                               class="form-control"
-                                                                                        >
-                                                                                        <input type="hidden"
-                                                                                               name="seasons[{{$seasonCounts}}][price_list][{{$index}}][plan_id]"
-                                                                                               class="form-control"
-                                                                                               value="{{$plan->id}}"
-                                                                                        >
-                                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                    <label>@lang('site.season_start')</label>
+                                                                                    <input type="date"
+                                                                                           value="{{$season->start}}"
+                                                                                           name="seasons[{{$seasonCounts}}][start]"
+                                                                                           class="form-control"
+                                                                                    >
                                                                                 </div>
-                                                                            @endforeach
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                    <label>@lang('site.season_end')</label>
+                                                                                    <input type="date"
+                                                                                           value="{{$season->end}}"
+                                                                                           name="seasons[{{$seasonCounts}}][end]"
+                                                                                           class="form-control"
+                                                                                    >
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="seasons_price_lists">
+                                                                            <div
+                                                                                class="row justify-content-center align-items-center">
+                                                                                @foreach($season->price_lists as  $index => $price_list)
+
+                                                                                    <div class="col-md-3">
+                                                                                        <div class="form-group">
+                                                                                            <label>{{$price_list->plan->translate($locale)->name }}
+                                                                                                Price</label>
+                                                                                            <input type="number"
+                                                                                                   name="seasons[{{$seasonCounts}}][price_list][{{$index}}][price]"
+                                                                                                   value="{{$price_list->price}}"
+                                                                                                   class="form-control"
+                                                                                            >
+                                                                                            <input type="hidden"
+                                                                                                   name="seasons[{{$seasonCounts}}][price_list][{{$index}}][plan_id]"
+                                                                                                   class="form-control"
+                                                                                                   value="{{$price_list->plan_id}}"
+                                                                                            >
+                                                                                        </div>
+                                                                                    </div>
+                                                                                @endforeach
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-
+                                                            @endforeach
                                                         </div>
                                                         <button class="btn btn-secondary float-right" type="button"
                                                                 id="add_season">Add Season
@@ -434,33 +446,36 @@
                                                 <!--        DAY INPUTS             -->
                                                     <div class="days_inputs">
                                                         <div class="days_inputs_container_ar">
-                                                            <div class="card card-info">
-                                                                <div class="card-header">
-                                                                    <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">
-                                                                        DAY {{ $dayCounts }} </h3>
-                                                                </div>
-                                                                <div class="card-body">
-                                                                    <div class="row">
-                                                                        <div class="col-12">
-                                                                            <div class="form-group">
-                                                                                <label>@lang('site.day_title')</label>
-                                                                                <input type="text"
-                                                                                       name="days[{{$dayCounts}}][ar][title]"
-                                                                                       class="form-control"
-                                                                                >
+                                                            @foreach($package->days as $index => $day)
+                                                                <div class="card card-info">
+                                                                    <div class="card-header">
+                                                                        <h3 class="card-title {{ app()->getLocale() == 'ar' ? 'float-left text-right' : '' }}">
+                                                                            DAY {{ $index+1 }} </h3>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <div class="form-group">
+                                                                                    <label>@lang('site.day_title')</label>
+                                                                                    <input type="text"
+                                                                                           name="days[{{$dayCounts}}][ar][title]"
+                                                                                           value="{{$day->translate('ar')->title}}"
+                                                                                           class="form-control"
+                                                                                    >
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="col-12">
-                                                                            <div class="form-group">
-                                                                                <label>@lang('site.day_summery')</label>
-                                                                                <textarea
-                                                                                    name="days[{{$dayCounts}}][ar][summery]"
-                                                                                    class="form-control ckeditor"></textarea>
+                                                                            <div class="col-12">
+                                                                                <div class="form-group">
+                                                                                    <label>@lang('site.day_summery')</label>
+                                                                                    <textarea
+                                                                                        name="days[{{$dayCounts}}][ar][summery]"
+                                                                                        class="form-control ckeditor"> {{$day->translate('ar')->summery}}</textarea>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            @endforeach
                                                         </div>
                                                         <button class="btn btn-secondary float-right my-2" type="button"
                                                                 id="add_day">Add Day
@@ -562,7 +577,7 @@
                                                                 <label>@lang('site.meta_description')</label>
                                                             @endif
                                                             <textarea name="{{ $locale }}[meta_description]"
-                                                                      class="form-control ckeditor">value="{{$package->seoAttributes->translate($locale)->meta_description}}"</textarea>
+                                                                      class="form-control ckeditor">{{$package->seoAttributes->translate($locale)->meta_description}}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -665,7 +680,7 @@
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">@lang('site.add')</button>
+                                    <button type="submit" class="btn btn-primary">@lang('site.edit')</button>
                                 </div>
                             </form>
                         </div>
@@ -819,5 +834,4 @@
 `)
         })
     </script>
-    <script src="{{asset('dashboard_files/js/my-custum.js')}}"></script>
 @endpush

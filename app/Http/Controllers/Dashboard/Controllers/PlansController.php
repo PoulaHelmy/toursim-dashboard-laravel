@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard\Controllers;
 
+
+use App\Http\Controllers\Controller;
 use App\Http\Requests\BackEnd\Plans\Store;
 use App\Http\Requests\BackEnd\Plans\Update;
 use App\Models\Plan;

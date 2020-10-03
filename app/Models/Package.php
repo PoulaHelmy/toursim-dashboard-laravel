@@ -15,7 +15,7 @@ class Package extends Model implements TranslatableContract
     public $translatedAttributes = ['name', 'slug', 'short_description', 'overview', 'run', 'type'];
     protected $fillable = ['discount', 'start', 'duration', 'status', 'featured', 'destination_id',
         'name', 'slug', 'short_description', 'overview', 'run', 'places', 'type'];
-    protected $with = ['seoAttributes', 'photos', 'destination', 'gallary', 'categories', 'includes'];
+    protected $with = ['seoAttributes', 'photos', 'destination', 'gallary', 'categories', 'includes', 'days', 'hotels'];
 
     public function seoAttributes()
     {

@@ -14,6 +14,7 @@ class Category extends Model implements TranslatableContract
     public $useTranslationFallback = true;
     public $translatedAttributes = ['name', 'slug', 'description'];
     protected $fillable = ['name', 'slug', 'description'];
+    protected $with = ['seoAttributes', 'photos'];
 
     public function seoAttributes()
     {
