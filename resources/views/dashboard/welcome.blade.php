@@ -1,88 +1,360 @@
 @extends('layouts.dashboard.app')
 
 @section('content')
-    <div class="content-wrapper">
-        <!--  STATICTS HERE -->
-        {{--        <section class="content-header">--}}
+    <!-- Main content -->
+    <section class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0 text-dark">Main DashBoard</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="{{route('welcome')}}">Home</a></li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+        <div class="content my-4">
+            <div class="container-fluid">
+                <!-- Info boxes -->
+                <div class="row">
+                    <!-- /.col ALL Packages -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-info elevation-1">
+                                 <a href="{{ route('packages.index') }}">
+                                <i
+                                    class="nav-icon fas fa-suitcase"></i></a></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">ALL Packages</span>
+                                <span class="info-box-number">
+                                    {{$all_pkgs}}
+                                </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col ALL Categories -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-danger elevation-1">
+                             <a href="{{ route('excursions.index') }}">
+                            <i
+                                class="nav-icon fas fa-umbrella"></i></a>
+                            </span>
 
-        {{--            <h1>@lang('site.dashboard')</h1>--}}
+                            <div class="info-box-content">
+                                <span class="info-box-text">ALL Excursions </span>
+                                <span class="info-box-number">{{$all_excursions}}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <!-- fix for small devices only -->
+                    <div class="clearfix hidden-md-up"></div>
+                    <!-- ALL Categories -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-success elevation-1">
+                                 <a href="{{ route('categories.index') }}">
+                                <i
+                                    class="nav-icon fas fa-network-wired"></i></a>
+                            </span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">ALL Categories</span>
+                                <span class="info-box-number">{{$all_cats}} </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col  ALL Destinations-->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-warning elevation-1">
+                                  <a href="{{ route('destinations.index') }}">
+                                <i
+                                    class="nav-icon fas fa-paper-plane"></i></a></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">All Destinations</span>
+                                <span class="info-box-number">{{$all_destinations}}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <!-- Info boxes -->
+                <div class="row">
+                    <!-- /.col ALL EXCURIONS -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-info elevation-1">
+                                  <a href="#">
+                                      <i class="fas fa-cog"></i></a>
+                            </span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">ALL Pages</span>
+                                <span class="info-box-number">
+                                    10
+                                </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col ALL Hotels -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-danger elevation-1">  <a
+                                    href="{{ route('hotels.index') }}"> <i
+                                        class="nav-icon fas fa-hotel"></i></a></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">ALL Hotels</span>
+                                <span class="info-box-number">{{$all_hotels}}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
 
-        {{--            <ol class="breadcrumb">--}}
-        {{--                <li class="active"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</li>--}}
-        {{--            </ol>--}}
-        {{--        </section>--}}
-        {{--        <section class="content">--}}
+                    <!-- fix for small devices only -->
+                    <div class="clearfix hidden-md-up"></div>
+                    <!-- ALL Destinations -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-success elevation-1">
+                                <a href="{{ route('plans.index') }}">  <i class="fas fa-money-check-alt"></i></a>
+                            </span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">ALL Plans</span>
+                                <span class="info-box-number">{{$all_plans}}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col  ALL USERS-->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="info-box mb-3">
+                            <span class="info-box-icon bg-warning elevation-1">
 
-        {{--            <div class="row">--}}
+                                  <a href="http://tour.devel/laratrust">
+                                      <i class="fas fa-users"></i></a></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">All Users</span>
+                                <span class="info-box-number">{{$all_users}}</span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
 
-        {{--                <div class="col-lg-3 col-xs-6">--}}
-        {{--                    <div class="small-box bg-aqua">--}}
-        {{--                        <div class="inner">--}}
-        {{--                            <h3>{{ $users_count ?? '' }}</h3>--}}
-        {{--                            <p>@lang('site.users')</p>--}}
-        {{--                        </div>--}}
-        {{--                        <div class="icon">--}}
-        {{--                            <i class="ion ion-bag"></i>--}}
-        {{--                        </div>--}}
-        {{--                        --}}{{--                        <a href="{{ route('dashboard.users.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
+                <!-- CHARTS -->
+                {{--                <div class="row">--}}
+                {{--                    <div class="col-md-6">--}}
+                {{--                        <!-- USERS CHART -->--}}
+                {{--                        <div class="card card-warning">--}}
+                {{--                            <div class="card-header">--}}
+                {{--                                <h3 class="card-title">USERS Chart</h3>--}}
+                {{--                                <div class="card-tools">--}}
+                {{--                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i--}}
+                {{--                                            class="fas fa-minus"></i>--}}
+                {{--                                    </button>--}}
+                {{--                                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i--}}
+                {{--                                            class="fas fa-times"></i></button>--}}
+                {{--                                </div>--}}
+                {{--                            </div>--}}
+                {{--                            <div class="card-body">--}}
+                {{--                                <canvas id="usersChart"--}}
+                {{--                                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>--}}
+                {{--                            </div>--}}
+                {{--                            <!-- /.card-body -->--}}
+                {{--                        </div>--}}
+                {{--                        <!-- /.card -->--}}
+                {{--                    </div>--}}
+                {{--                    <div class="col-md-6">--}}
 
-        {{--                <div class="col-lg-3 col-xs-6">--}}
-        {{--                    <div class="small-box bg-blue">--}}
-        {{--                        <div class="inner">--}}
-        {{--                            <h3>{{ $articles_count ?? '' }}</h3>--}}
 
-        {{--                            <p>@lang('site.articles')</p>--}}
-        {{--                        </div>--}}
-        {{--                        <div class="icon">--}}
-        {{--                            <i class="ion ion-stats-bars"></i>--}}
-        {{--                        </div>--}}
-        {{--                        --}}{{--                        <a href="{{ route('articles.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--                <div class="col-lg-3 col-xs-6">--}}
-        {{--                    <div class="small-box bg-red">--}}
-        {{--                        <div class="inner">--}}
-        {{--                            <h3>{{ $rejected_count ?? '' }}</h3>--}}
+                {{--                        <!-- PIE CHART -->--}}
+                {{--                        <div class="card card-danger">--}}
+                {{--                            <div class="card-header">--}}
+                {{--                                <h3 class="card-title">Pie Chart</h3>--}}
 
-        {{--                            <p>@lang('site.rejected')</p>--}}
-        {{--                        </div>--}}
-        {{--                        <div class="icon">--}}
-        {{--                            <i class="fa fa-user"></i>--}}
-        {{--                        </div>--}}
-        {{--                        --}}{{--                        <a href="{{ route('articles.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--                <div class="col-lg-3 col-xs-6">--}}
-        {{--                    <div class="small-box bg-green">--}}
-        {{--                        <div class="inner">--}}
-        {{--                            <h3>{{ $accepted_count?? ''  }}</h3>--}}
+                {{--                                <div class="card-tools">--}}
+                {{--                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i--}}
+                {{--                                            class="fas fa-minus"></i>--}}
+                {{--                                    </button>--}}
+                {{--                                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i--}}
+                {{--                                            class="fas fa-times"></i></button>--}}
+                {{--                                </div>--}}
+                {{--                            </div>--}}
+                {{--                            <div class="card-body">--}}
+                {{--                                <canvas id="pieChart"--}}
+                {{--                                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>--}}
+                {{--                            </div>--}}
+                {{--                            <!-- /.card-body -->--}}
+                {{--                        </div>--}}
+                {{--                        <!-- /.card -->--}}
 
-        {{--                            <p>@lang('site.accepted')</p>--}}
-        {{--                        </div>--}}
-        {{--                        <div class="icon">--}}
-        {{--                            <i class="fa fa-users"></i>--}}
-        {{--                        </div>--}}
-        {{--                        --}}{{--                        <a href="{{ route('articles.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--                <div class="col-lg-3 col-xs-6">--}}
-        {{--                    <div class="small-box bg-yellow">--}}
-        {{--                        <div class="inner">--}}
-        {{--                            <h3>{{ $pending_count ?? '' }}</h3>--}}
+                {{--                    </div>--}}
 
-        {{--                            <p>@lang('site.pending')</p>--}}
-        {{--                        </div>--}}
-        {{--                        <div class="icon">--}}
-        {{--                            <i class="fa fa-users"></i>--}}
-        {{--                        </div>--}}
-        {{--                        --}}{{--                        <a href="{{ route('articles.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--            </div><!-- end of row -->--}}
-        {{--        </section><!-- end of content -->--}}
+                {{--                </div>--}}
 
-    </div><!-- end of content wrapper -->
+
+            </div>
+        </div>
+    </section>
+
 @endsection
+@push('scripts')
+    {{--    <script>--}}
+    {{--        $(function () {--}}
+    {{--            /* ChartJS--}}
+    {{--             * ---------}}
+    {{--             * Here we will create a few charts using ChartJS--}}
+    {{--             */--}}
 
+
+    {{--            //---------------}}
+    {{--            //- DONUT CHART ---}}
+    {{--            //---------------}}
+    {{--            // Get context with jQuery - using jQuery's .get() method.--}}
+    {{--            var usersChartCanvas = $('#usersChart').get(0).getContext('2d')--}}
+    {{--            var usersData = {--}}
+    {{--                labels: [--}}
+    {{--                    'AllUsers',--}}
+    {{--                    'Role',--}}
+    {{--                    'Permission',--}}
+    {{--                    'Admins',--}}
+    {{--                ],--}}
+    {{--                datasets: [--}}
+    {{--                    {--}}
+    {{--                        data: [{{$all_users}},{{$all_roles}}, 400, 600],--}}
+    {{--                        backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef'],--}}
+    {{--                    }--}}
+    {{--                ]--}}
+    {{--            }--}}
+    {{--            var usersOptions = {--}}
+    {{--                maintainAspectRatio: false,--}}
+    {{--                responsive: true,--}}
+    {{--            }--}}
+    {{--            //Create pie or douhnut chart--}}
+    {{--            // You can switch between pie and douhnut using the method below.--}}
+    {{--            var donutChart = new Chart(usersChartCanvas, {--}}
+    {{--                type: 'doughnut',--}}
+    {{--                data: usersData,--}}
+    {{--                options: usersOptions--}}
+    {{--            })--}}
+
+    {{--            //---------------}}
+    {{--            //- PIE CHART ---}}
+    {{--            //---------------}}
+    {{--            // Get context with jQuery - using jQuery's .get() method.--}}
+    {{--            var pieChartCanvas = $('#pieChart').get(0).getContext('2d')--}}
+    {{--            var pieData = donutData;--}}
+    {{--            var pieOptions = {--}}
+    {{--                maintainAspectRatio: false,--}}
+    {{--                responsive: true,--}}
+    {{--            }--}}
+    {{--            //Create pie or douhnut chart--}}
+    {{--            // You can switch between pie and douhnut using the method below.--}}
+    {{--            var pieChart = new Chart(pieChartCanvas, {--}}
+    {{--                type: 'pie',--}}
+    {{--                data: pieData,--}}
+    {{--                options: pieOptions--}}
+    {{--            })--}}
+
+    {{--            //---------------}}
+    {{--            //- BAR CHART ---}}
+    {{--            //---------------}}
+    {{--            var barChartCanvas = $('#barChart').get(0).getContext('2d')--}}
+    {{--            var barChartData = jQuery.extend(true, {}, areaChartData)--}}
+    {{--            var temp0 = areaChartData.datasets[0]--}}
+    {{--            var temp1 = areaChartData.datasets[1]--}}
+    {{--            barChartData.datasets[0] = temp1--}}
+    {{--            barChartData.datasets[1] = temp0--}}
+
+    {{--            var barChartOptions = {--}}
+    {{--                responsive: true,--}}
+    {{--                maintainAspectRatio: false,--}}
+    {{--                datasetFill: false--}}
+    {{--            }--}}
+
+    {{--            var barChart = new Chart(barChartCanvas, {--}}
+    {{--                type: 'bar',--}}
+    {{--                data: barChartData,--}}
+    {{--                options: barChartOptions--}}
+    {{--            })--}}
+
+
+    {{--        })--}}
+    {{--    </script>--}}
+@endpush
+{{--<div class="row">--}}
+{{--    <div class="col-md-6">--}}
+
+
+{{--        <!-- DONUT CHART -->--}}
+{{--        <div class="card card-danger">--}}
+{{--            <div class="card-header">--}}
+{{--                <h3 class="card-title">Donut Chart</h3>--}}
+
+{{--                <div class="card-tools">--}}
+{{--                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i--}}
+{{--                            class="fas fa-minus"></i>--}}
+{{--                    </button>--}}
+{{--                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i--}}
+{{--                            class="fas fa-times"></i></button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="card-body">--}}
+{{--                <canvas id="donutChart"--}}
+{{--                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>--}}
+{{--            </div>--}}
+{{--            <!-- /.card-body -->--}}
+{{--        </div>--}}
+{{--        <!-- /.card -->--}}
+
+{{--    </div>--}}
+{{--    <div class="col-md-6">--}}
+
+
+{{--        <!-- PIE CHART -->--}}
+{{--        <div class="card card-danger">--}}
+{{--            <div class="card-header">--}}
+{{--                <h3 class="card-title">Pie Chart</h3>--}}
+
+{{--                <div class="card-tools">--}}
+{{--                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i--}}
+{{--                            class="fas fa-minus"></i>--}}
+{{--                    </button>--}}
+{{--                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i--}}
+{{--                            class="fas fa-times"></i></button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="card-body">--}}
+{{--                <canvas id="pieChart"--}}
+{{--                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>--}}
+{{--            </div>--}}
+{{--            <!-- /.card-body -->--}}
+{{--        </div>--}}
+{{--        <!-- /.card -->--}}
+
+{{--    </div>--}}
+
+{{--</div>--}}

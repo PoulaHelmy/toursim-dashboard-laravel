@@ -182,6 +182,19 @@
         }
 
     });
+    $(".user_banner_image").change(function () {
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.user_banner_image_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(this.files[0]);
+        }
+
+    });
     $(".cat_thumb_image").change(function () {
 
         if (this.files && this.files[0]) {

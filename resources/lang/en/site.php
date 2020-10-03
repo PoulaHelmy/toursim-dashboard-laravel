@@ -36,13 +36,15 @@ return [
     'no_data_found' => 'Sorry No Data Found',
     'no_records' => 'Sorry No Records Found',
 
-
+    'addusers' => 'Add New User',
+    'editusers' => 'Edit User',
     'phone' => 'Tel',
     'address' => 'Address',
 
     'users' => 'Users',
     'users_control' => 'Users Control',
     'roles' => 'User Roles',
+    'role' => 'User Role',
 
     'first_name' => 'First Name',
     'last_name' => 'Last Name',

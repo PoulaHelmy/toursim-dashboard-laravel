@@ -26,7 +26,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                 data-accordion="false">
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{route('welcome')}}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -34,9 +34,19 @@
                     </a>
                 </li>
                 @if (auth()->user()->hasRole('super_admin'))
-                    <li class="nav-item">
+                    <li class="nav-item has-treeview">
                         <a href="http://tour.devel/laratrust" class=" nav-link">
                             <i class="fas fa-fingerprint"></i>
+                            <p>
+                                @lang('site.users_control')
+                            </p>
+                        </a>
+                    </li>
+                @endif
+                @if (auth()->user()->hasPermission('read_users'))
+                    <li class="nav-item has-treeview">
+                        <a href="{{ route('users.index') }}" class=" nav-link">
+                            <i class="fas fa-users"></i>
                             <p>
                                 @lang('site.users_control')
                             </p>

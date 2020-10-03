@@ -52,6 +52,7 @@ return [
     'users' => 'المستخدمين',
     'users_control' => 'لوحة التحكم بالمستخدمين',
     'roles' => 'ادوار المستخدمين',
+    'role' => 'دور المستخدم',
 
     'first_name' => 'الاسم الاول',
     'last_name' => 'الاسم الاخير',
@@ -181,5 +182,6 @@ return [
     'day_summery' => 'Day Summery',
     'season_start' => 'Season Start',
     'season_end' => 'Season End',
-
+    'addusers' => 'Add New User',
+    'editusers' => 'Edit User',
 ];

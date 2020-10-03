@@ -34,6 +34,7 @@ class PlansController extends Controller
 
     public function store(Store $request)
     {
+        dd($request->all());
         Plan::create($request->all());
         session()->flash('success', __('site.added_successfully'));
         return redirect()->route('plans.index');
