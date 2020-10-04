@@ -24,20 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92ce5ba3-76e7-44ec-bcf6-5297c4fd3281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Controllers/ExcursionsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Controllers/ExcursionsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Controllers/PackagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/Controllers/PackagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BackEnd/Excursions/Store.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BackEnd/Excursions/Store.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BackEnd/Packages/Store.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BackEnd/Packages/Store.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/destinations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/destinations/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/excursions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/excursions/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/hotels/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/hotels/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/packages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/packages/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/plans/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/plans/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/_aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +258,8 @@
       <workItem from="1601450627595" duration="23665000" />
       <workItem from="1601536735342" duration="24564000" />
       <workItem from="1601579936797" duration="60878000" />
-      <workItem from="1601745482488" duration="9849000" />
+      <workItem from="1601745482488" duration="10042000" />
+      <workItem from="1601795620198" duration="104000" />
     </task>
     <servers />
   </component>
